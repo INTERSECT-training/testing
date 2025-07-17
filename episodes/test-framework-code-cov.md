@@ -30,6 +30,7 @@ you haven't done so already. We will be using pytest in as our test framework.
 
 ## Test already!
 Now let's make sure pytest is set up and ready to test.
+
 > In a larger package the structure should follow what you've already been
 > taught, with source code and tests in different directories.  Here we will stick
 > in the same folder for simplicity.
