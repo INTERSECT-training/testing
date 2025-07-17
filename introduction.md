@@ -38,6 +38,7 @@ A software test typically involves the following activities.
    While this can be an effective method, it has the tendency to miss corner cases
    where most mistakes are made. Therefore we will be discussing several
    approaches used for developing test inputs.
+   
 2. Test execution: tests need should be executed multiple times when code is
    changed some way, when implementing new features or when fixing bugs. Thus
    execution of tests should be automated as much as possible with the help of
