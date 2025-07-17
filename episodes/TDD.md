@@ -51,13 +51,18 @@ to break your system.
 ## Red, green, refactor
 
 The basic cycle of work with TDD is called **red**, **green**, **refactor**:
+
+![Red-Green-Refactor cycle in a nutshell](fig/reg-green-refactor.png){alt="Cycle with three nodes: 'Red (write a failing test)', followed by 'Green (write just enough code to pass the test)', followed by 'Refactor (improve the code with tests intact)', then back to Red"}
+
 - Start by writing a failing test.  This is the **red** phase since your test runner
 will show a failure, usually with a red color.  Only when you having a failing
 test can you add a feature.
+
 - Add only as much code to make the test pass (**green**).  You want to work on the code base
 only until your tests are passing, then stop!  This is often difficult if you
 are struck by inspiration but try to slow down and add a note to come back to.
 Maybe you identified the next test to write!
+
 - Look over your code *and tests* and see if anything should be *refactored*. Refactoring is the process of restructuring or improving the internal structure of existing source code without changing its external behavior. It can involve  modifications to the code to make it more readable, maintainable, efficient, and adhering to best coding practices.   At
 this point your test suite is passing and you can really get creative.  If a change
 causes something to break you can easily undo it and get back to safety.  Also,
@@ -128,14 +133,14 @@ You can be extra thorough and see if `end-to-end.sh` still passes.
 ### Refactor
 At this point, our pytest function is just making sure we can import the code.
 But our end-to-end test makes sure the entire function is working as expected
-(albeit for a small, simple input).  How about we move the file IO into the main
-guard?
+(albeit for a small, simple input).  How about we move the file IO into the `main`
+function?
 
 :::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Refactor
 
-Change file IO to occur in the guard clause.  Your new main method should look
+Change file IO to occur in the `main` function.  Your new main function should look
 like `def main(infile, outfile)`.
 
 :::::::::::::::::::::::::::::::::::::: solution 
@@ -162,7 +167,7 @@ After refactoring save the code as overlap_v1.py.
 ## End-to-end testing with pytest
 
 We have a lot to address, but it would be nice to integrate our end to end test
-with pytest so we can just run one command.  The problem is our main method deals
+with pytest so we can just run one command.  The problem is our `main` function  deals
 with files.  Reading and writing to a file system can be several orders of magnitude
 slower than working in main memory.  We want our tests to be fast so we can run
 them all the time.  The nice thing about python's duck typing is the infile and
@@ -203,26 +208,30 @@ def test_end_to_end():
     assert output[2].split() == '0 0 1'.split()
 ```
 Since this is the first non-trivial test, let's spend a moment going over it.
-Like before we import our module and make our test function start with `test_`.
+As before, we import our module and make our test function start with `test_`.
 The actual name of the function is for your benefit only so don't be worried if
 it is "too long".  You won't have to type it so be descriptive!  Next we have the
-three steps in all tests: Arrange-Act-Assert (aka Given-When-Then)
+three steps in all tests:
 
-- Arrange: Set up the state of the program in a particular way to test the feature you want.
+**Arrange-Act-Assert (aka Given-When-Then)**
+
+- **Arrange:** Set up the state of the program in a particular way to test the feature you want.
 Consider edge cases, mocking databases or files, building helper objects, etc.
-- Act: Call the code you want to test
-- Assert: Confirm the observable outputs are what you expect (i.e. compare the output with the expected output).  Notice that the
+
+- **Act:** Call the code you want to test
+
+- **Assert:** Confirm the observable outputs are what you expect (i.e. compare the output with the expected output).  Notice that the
 outputs here read like the actual output file.
 
-Again, pytest uses plain assert statements to test results.
+Again, pytest uses plain `assert` statements to test results.
 
-But we have a problem, our test passes!  This is partially because we are replacing
-an existing test, but the problem is how can you be sure you are testing what you
-think?  Maybe you are importing a different version of code, maybe pytest isn't
-finding your test, etc.  Often a test that passes which should fail is more
-worrisome than a test which fails that should be passing.
+But we have a problem: our test *passes!*  This is partially because we are replacing
+an existing test, but it reveals a broader concern: how can you be sure you are testing what you
+think you are testing?  Maybe you are importing a different version of code, maybe pytest isn't
+finding your test, etc.  Often a test that passes when it should fail is more
+diagnostically worrisome than a test that fails when it should be passing.
 
-Notice the splits in the assert section, they normalize the output so any
+Notice the splits in the `assert` section, they normalize the output so any
 whitespace will be accepted.  Let's replace those with explicit white space
 (tabs) and see if we can go red:
 ```python
@@ -285,7 +294,10 @@ the change and not have a tab followed by a newline.
 Let's focus this round of refactoring on our test code and introduce some nice
 pytest features.  First, it seems like we will want to use our simple input
 file in other tests.  Instead of copying and pasting it around, let's extract it
-as a *fixture*.  Pytest fixtures can do a lot, but for now we just need a
+as a *fixture*.
+
+#### pytest Fixtures
+Pytest fixtures can do a lot, but for now we just need a
 StringIO object built for some tests:
 ```python
 # test_overlap.py
