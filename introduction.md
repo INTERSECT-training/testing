@@ -43,6 +43,7 @@ A software test typically involves the following activities.
    changed some way, when implementing new features or when fixing bugs. Thus
    execution of tests should be automated as much as possible with the help of
    test frameworks (i.e. test tools) and CI/CD infrastructure.
+
 3. Checking the test outputs: this is done by comparing the output of
    test cases with the expected output of the software and should be
    automated as well.
@@ -61,6 +62,7 @@ Software engineering lingo captures this distinction with the
 
 * __Verification :__ does the software do what the specification says
   it should do? In other words, does the output match expectations?
+
 * __Validation :__ are those even the right specs in the first place?
   In other words, do our expectations align with reality or scientific
   ground truth? Or in yet other words, is verified code correct?
