@@ -77,11 +77,13 @@ outside of the class, but in terms of testing, `test_query_1` would break while
 `test_query_2` still passes, *even if the code is correct*.  This is annoying
 because you have to change a lot of test code but it is also dangerous.  Tests
 that fail for correct code encourage you to run tests less often and can cause
-code and tests to diverge.  **Where possible, test to the interface**.
+code and tests to diverge.
+
+> **Where possible, test to the interface**.
 
 ## Returning a new rectangle
 Back to our rectangles, let's change our `rects_overlap` to return a new rectangle
-when the arguments overlap, and None when they do not.
+when the arguments overlap, and `None` when they do not.
 
 ### Red
 We will start with the basic `test_rects_overlap`
