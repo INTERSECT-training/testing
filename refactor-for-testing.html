@@ -319,7 +319,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Refactoring for Testing</h1>
-        <p>Last updated on 2025-05-21 |
+        <p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/testing-lesson/edit/main/episodes/refactor-for-testing.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -354,13 +354,14 @@
 </div>
 </div>
 <div class="section level1">
-<h1 id="monolithic-main-methods">Monolithic Main Methods<a class="anchor" aria-label="anchor" href="#monolithic-main-methods"></a></h1>
+<h1 id="monolithic-main-functions">Monolithic <code>main</code> functions<a class="anchor" aria-label="anchor" href="#monolithic-main-functions"></a></h1>
 <p>One of the smelliest code smells that new developers make is having a
-single main method which spans several hundred (thousand?) lines. Even
-if the code is perfect, long methods are an anti-pattern because they
-require a reader of the code to have exceptionally good working memory
-to understand the method. It also becomes impossible to reuse part of
-the code elsewhere.</p>
+single <code>main()</code> function that spans several hundred
+(thousand?) lines. Even if the code is perfect, long functions and
+methods are an anti-pattern because they require a reader of the code to
+have exceptionally good working memory to understand the function or
+method. It also becomes impossible to reuse part of the code
+elsewhere.</p>
 <p>Consider the following two sections of code:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -382,8 +383,9 @@ here to talk about testing!</p>
 <p>Consider writing a test for the first version, where all the logic of
 what makes a user an admin is in the if statement. To even get to this
 line of code you will have to set up your system and possibly mock or
-replace other function calls. As a separate function, your test becomes
-a unit test, exercising a small piece of code. Here is a possible
+replace other function calls.</p>
+<p>But as a separate function, your test becomes a <strong><em>unit
+test</em></strong>, exercising a small piece of code. Here is a possible
 pytest:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -475,7 +477,7 @@ function call.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -531,12 +533,12 @@ and we may want to support floats later (hint, we do!).</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="test-like-an-enemy">Test like an enemy<a class="anchor" aria-label="anchor" href="#test-like-an-enemy"></a></h2>
+<h2 id="test-like-an-adversary">Test like an adversary<a class="anchor" aria-label="anchor" href="#test-like-an-adversary"></a></h2>
 <p>With a small, testable method in place, we can start adding features
 and get creative. Often you will take the mindset of an adversary of a
 codebase. This is generally easier with someone else’s code because you
 can think “I bet they didn’t think of this” instead of “why didn’t I
-think of this”, but being self deprecating gets easier with
+think of this”, but being self-deprecating gets easier with
 practice.</p>
 <p>Think of all the ways the overlap code could break, all the things
 that aren’t tested, and how you would expect them to be handled.
@@ -573,7 +575,7 @@ test if an exception is thrown.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Here is one set of tests and passing code. You may have chosen
 different behavior for some changes.</p>
@@ -651,10 +653,10 @@ typical for well-tested code.</p>
 all these pathological cases? The answer is no (for most). We already
 know our <code>read_rectangles</code> will handle the incorrect number
 of coordinates by throwing an informative error so it would be redundant
-to see if the main method has the same behavior. However, it would be
-useful to document what happens if an empty input file is supplied.
-Maybe you want <code>read_rectangles</code> to return an empty dict but
-the main method should warn the user or fail.</p>
+to see if the <code>main</code> function has the same behavior. However,
+it would be useful to document what happens if an empty input file is
+supplied. Maybe you want <code>read_rectangles</code> to return an empty
+dict but the main method should warn the user or fail.</p>
 <p>The decision not to test something in multiple places is more
 important than being efficient with our time writing tests. Say we want
 to change the message printed for one of the improper input cases. If
@@ -664,7 +666,7 @@ tests are code and should be kept DRY. Tests that are hard to change
 don’t get run and code eventually degrades back to a legacy version.</p>
 </div>
 <div class="section level2">
-<h2 id="testing-testing-for-overlap">Testing testing for overlap<a class="anchor" aria-label="anchor" href="#testing-testing-for-overlap"></a></h2>
+<h2 id="testing-how-we-test-for-overlap">Testing how we test for overlap<a class="anchor" aria-label="anchor" href="#testing-how-we-test-for-overlap"></a></h2>
 <p>We have arrived to the largest needed refactoring, the overlap code.
 This is the internals of the nested for loop.</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -711,7 +713,7 @@ rectangle.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>For testing, I’m using the simple input, when parsed from
 <code>read_rectangles</code>. Notice that if we had used
@@ -775,11 +777,16 @@ rectangles to guide your testing:</p>
      └──┼┘ │   └──┴──┘   └─┼──┼─┘      └─┘
         └──┘               └──┘             </code></pre>
 <p>For each, consider swapping the red and blue labels and rotating 90
-degrees. Rotating a coordinate 90 degrees clockwise is simply swapping x
-and y while negating the new y value. If you thought the rotation
-function would be useful elsewhere, you could add it to your script, but
-for now we will keep it in our pytest code. First, write some failing
-unit tests of our new helper function:</p>
+degrees.</p>
+<blockquote>
+<p><strong>Helpful math fact:</strong> Rotating a coordinate 90 degrees
+clockwise is simply swapping x and y and then negating the new y
+value.</p>
+</blockquote>
+<p>Note that if you thought the rotation function would be useful
+elsewhere, you could add it to your script, but for now we will keep it
+in our pytest code.</p>
+<p>First, write some failing unit tests of our new helper function:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -822,8 +829,8 @@ where <code>x1 &lt;= x2</code>.</p>
 our project and it’s just a helper for our tests, we could use it
 elsewhere in later tests. Since the function is non-trivial we also have
 it tested. For helper functions that mutate or wrap inputs, you
-<em>could</em> have them non-tested but beware the simple helper
-function may evolve into something more complex!</p>
+<em>could</em> have them non-tested but beware: the simple helper
+function may eventually evolve into something more complex!</p>
 <div id="test-the-first-overlap-orientation" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -844,7 +851,7 @@ red/blue assignment. Hint: pytest code is still python!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>With our <code>rotate_rectangle</code> function in hand, the test
 function needs to test <code>rects_overlap</code> twice (swapping
@@ -968,19 +975,19 @@ basically have a parametrized test. Using
 <span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a>    <span class="cf">else</span>:</span>
 <span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a>        <span class="cf">assert</span> square_sometimes(value, condition) <span class="op">==</span> output</span></code></pre>
 </div>
-<p>pytest will generate the cross product of all nested parameters, here
-producing 6 tests. Notice how there is no code duplication and if you
-come up with another test input, you just have to add it to the
+<p>pytest will generate the Cartesian product of all nested parameters,
+here producing 6 tests. Notice how there is no code duplication and if
+you come up with another test input, you just have to add it to the
 ‘value,output’ list; testing each condition will automatically happen.
 Compared with coding the loops yourself, pytest generates better error
 reporting on what set of parameters failed. Like most of pytest, there
 is a lot more we aren’t covering like mixing parameters and
 fixtures.</p>
 <p>Here is the parameterized version of
-<code>test_rects_overlap_permutations</code>. I added the unicode
-rectangle images because I already made them above and it seemed like a
-shame to not reuse. Normally I wouldn’t spend time making them and
-instead use a text descriptor, e.g. “Corners overlap”.</p>
+<code>test_rects_overlap_permutations</code>. We added the unicode
+rectangle images because we had already made them above and it seemed
+like a shame to not reuse. Normally you wouldn’t spend time making them
+and instead use a simple text descriptor, e.g. “Corners overlap”.</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1055,7 +1062,7 @@ launches pdb at the site of the first assertion error.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>Only one set of rectangles is failing and it’s on the first rotation.
 That should indicate our tests are working properly and perhaps there is
@@ -1077,14 +1084,14 @@ fix is easy.</p>
 </div>
 <p>In contrast to the last implementation change we made (removing the
 trailing tab character) this bug fix is more serious. You have revealed
-an error in code that was previously published! Were this a real
-example, you should open an issue with the original code and consider
-rerunning any dependent analyses to see if results fundamentally change.
-It may be by chance that branch of code never actually ran and it didn’t
-matter if it were wrong. Maybe only 1% of cases were miscalled. That
-would require just a new version to patch the issue. Larger changes in
-the results may necessitate a revision or retraction of the original
-publication.</p>
+an error in code that was previously published!</p>
+<p>Were this a real example, you should open an issue with the original
+code and consider rerunning any dependent analyses to see if results
+fundamentally change. It may be by chance that branch of code never
+actually ran and it didn’t matter if it were wrong. Maybe only 1% of
+cases were miscalled. That would require just a new version to patch the
+issue. Larger changes in the results may necessitate a revision or
+retraction of the original publication.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1169,7 +1176,7 @@ any links that you are not going to use.
   "url": "https://INTERSECT-training.github.io/testing-lesson/refactor-for-testing.html",
   "identifier": "https://INTERSECT-training.github.io/testing-lesson/refactor-for-testing.html",
   "dateCreated": "2025-07-17",
-  "dateModified": "2025-05-21",
+  "dateModified": "2025-07-17",
   "datePublished": "2025-07-17"
 }
 
