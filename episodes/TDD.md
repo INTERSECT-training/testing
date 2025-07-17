@@ -52,7 +52,7 @@ to break your system.
 
 The basic cycle of work with TDD is called **red**, **green**, **refactor**:
 
-![Red-Green-Refactor cycle, liberally borrowed from a blog at https://khalilstemmler.com/](fig/reg-green-refactor.png){alt="Cycle with three nodes: 'Red (write a failing test)', followed by 'Green (write just enough code to pass the test)', followed by 'Refactor (improve the code with tests intact)', then back to Red"}
+![Red-Green-Refactor cycle, liberally borrowed from a blog at https://khalilstemmler.com/](fig/red-green-refactor.png){alt="Cycle with three nodes: 'Red (write a failing test)', followed by 'Green (write just enough code to pass the test)', followed by 'Refactor (improve the code with tests intact)', then back to Red"}
 
 - Start by writing a failing test.  This is the **red** phase since your test runner
 will show a failure, usually with a red color.  Only when you having a failing
