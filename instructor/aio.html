@@ -631,7 +631,7 @@ testing.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Starting with good things: 1. Variable names are fairly clear and
 properly formatted (snake case) 2. Comments are used properly 3. Runs
@@ -710,7 +710,7 @@ useful?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>The input doesn’t test rectangles where <code>x != y</code> or really
 exercise the code with more interesting cases (overlap at a point, a
@@ -789,7 +789,7 @@ any links that you are not going to use.
  -->
 </div></section><section id="aio-test-framework-code-cov"><p>Content from <a href="test-framework-code-cov.html">Test framework</a></p>
 <hr>
-<p>Last updated on 2025-05-21 |
+<p>Last updated on 2025-07-17 |
 
         <a href="https://github.com/INTERSECT-training/testing-lesson/edit/main/episodes/test-framework-code-cov.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -838,10 +838,12 @@ in as our test framework.</p>
 <div class="section level2">
 <h2 id="test-already">Test already!<a class="anchor" aria-label="anchor" href="#test-already"></a>
 </h2>
-<p>Now let’s make sure pytest is set up and ready to test. &gt; In a
-larger package the structure should follow what you’ve already been &gt;
-taught, with source code and tests in different directories. Here we
-will stick &gt; in the same folder for simplicity.</p>
+<p>Now let’s make sure pytest is set up and ready to test.</p>
+<blockquote>
+<p>In a larger package the structure should follow what you’ve already
+been taught, with source code and tests in different directories. Here
+we will stick in the same folder for simplicity.</p>
+</blockquote>
 <p>Pytest looks for files that start with <code>test_</code> and runs
 any functions in those files that start with <code>test_</code>. In
 contrast to <code>unittest</code> or other x-unit style frameworks,
