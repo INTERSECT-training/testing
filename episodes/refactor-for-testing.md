@@ -19,12 +19,12 @@ exercises: 40
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-# Monolithic Main Methods
+# Monolithic `main` functions
 
 One of the smelliest code smells that new developers make is having a single
-main method which spans several hundred (thousand?) lines.  Even if the code
-is perfect, long methods are an anti-pattern because they require a reader of
-the code to have exceptionally good working memory to understand the method.
+`main()` function that spans several hundred (thousand?) lines.  Even if the code
+is perfect, long functions and methods are an anti-pattern because they require a reader of
+the code to have exceptionally good working memory to understand the function or method.
 It also becomes impossible to reuse part of the code elsewhere.
 
 Consider the following two sections of code:
@@ -47,7 +47,9 @@ are interested in the internals.  But we are here to talk about testing!
 Consider writing a test for the first version, where all the logic of what
 makes a user an admin is in the if statement.  To even get to this line of code
 you will have to set up your system and possibly mock or replace other function
-calls.  As a separate function, your test becomes a unit test, exercising a
+calls.
+
+But as a separate function, your test becomes a ***unit test***, exercising a
 small piece of code.  Here is a possible pytest:
 ```python
 def test_user_is_admin():
@@ -169,12 +171,11 @@ def read_rectangles(rectangles: Iterable[str]) -> dict[str, list[float]]:
 Note our return value is a list of floats, ints are implied by that and we
 may want to support floats later (hint, we do!).
 
-## Test like an enemy
+## Test like an adversary
 With a small, testable method in place, we can start adding features and get
 creative.  Often you will take the mindset of an adversary of a codebase.  This
 is generally easier with someone else's code because you can think "I bet they
-didn't think of this" instead of "why didn't I think of this", but being self
-deprecating gets easier with practice.
+didn't think of this" instead of "why didn't I think of this", but being self-deprecating gets easier with practice.
 
 Think of all the ways the overlap code could break, all the things that aren't tested,
 and how you would expect them to be handled.  Remember users aren't perfect so
@@ -270,7 +271,7 @@ typical for well-tested code.
 A good question is, do we need to update our end-to-end test to cover all these
 pathological cases?  The answer is no (for most).  We already know our `read_rectangles`
 will handle the incorrect number of coordinates by throwing an informative error
-so it would be redundant to see if the main method has the same behavior.  However,
+so it would be redundant to see if the `main` function has the same behavior.  However,
 it would be useful to document what happens if an empty input file is supplied.
 Maybe you want `read_rectangles` to return an empty dict but the main method should
 warn the user or fail.
@@ -282,7 +283,7 @@ multiple places we need to update multiple tests that are effectively covering
 the same feature.  Remember that tests are code and should be kept DRY.  Tests that
 are hard to change don't get run and code eventually degrades back to a legacy version.
 
-## Testing testing for overlap
+## Testing how we test for overlap
 We have arrived to the largest needed refactoring, the overlap code.  This is the
 internals of the nested for loop.
 ```python
@@ -375,10 +376,16 @@ rectangles to guide your testing:
         └──┘               └──┘             
 ```
 For each, consider swapping the red and blue labels and rotating 90 degrees.
-Rotating a coordinate 90 degrees clockwise is simply swapping x and y while
-negating the new y value.  If you thought the rotation function would be useful
+
+> **Helpful math fact:**
+> Rotating a coordinate 90 degrees clockwise is simply swapping x and y and then
+negating the new y value.
+
+Note that if you thought the rotation function would be useful
 elsewhere, you could add it to your script, but for now we will keep it in our
-pytest code.  First, write some failing unit tests of our new helper function:
+pytest code.
+
+First, write some failing unit tests of our new helper function:
 ```python
 # test_overlap.py
 def test_rotate_rectangle():
@@ -415,8 +422,8 @@ def rotate_rectangle(rectangle):
 Notice this is *still* in our test file.  We don't want it in our project and
 it's just a helper for our tests, we could use it elsewhere in later tests.
 Since the function is non-trivial we also have it tested.  For helper functions
-that mutate or wrap inputs, you *could* have them non-tested but beware the
-simple helper function may evolve into something more complex!
+that mutate or wrap inputs, you *could* have them non-tested but beware: the
+simple helper function may eventually evolve into something more complex!
 
 
 :::::::::::::::::::::::::::::::::::::: challenge 
@@ -539,7 +546,7 @@ def test_square_sometimes(value, condition, output):
         assert square_sometimes(value, condition) == output
 ```
 
-pytest will generate the cross product of all nested parameters, here producing
+pytest will generate the Cartesian product of all nested parameters, here producing
 6 tests.  Notice how there is no code duplication and if you come up with another
 test input, you just have to add it to the 'value,output' list; testing each
 condition will automatically happen.  Compared with coding the loops yourself,
@@ -547,10 +554,10 @@ pytest generates better error reporting on what set of parameters failed.  Like
 most of pytest, there is a lot more we aren't covering like mixing parameters
 and fixtures.
 
-Here is the parameterized version of `test_rects_overlap_permutations`.  I
-added the unicode rectangle images because I already made them above and it
-seemed like a shame to not reuse.  Normally I wouldn't spend time making them
-and instead use a text descriptor, e.g. "Corners overlap".
+Here is the parameterized version of `test_rects_overlap_permutations`.  We
+added the unicode rectangle images because we had already made them above and it
+seemed like a shame to not reuse.  Normally you wouldn't spend time making them
+and instead use a simple text descriptor, e.g. "Corners overlap".
 ```python
 rectangle_strs = ['''
 ┌───┐  
@@ -634,7 +641,9 @@ rotating each case we would have also missed this.  At least the fix is easy.
 
 In contrast to the last implementation change we made (removing the trailing
 tab character) this bug fix is more serious.  You have revealed an error in
-code that was previously published!  Were this a real example, you should open
+code that was previously published!
+
+Were this a real example, you should open
 an issue with the original code and consider rerunning any dependent analyses
 to see if results fundamentally change.  It may be by chance that branch of
 code never actually ran and it didn't matter if it were wrong.  Maybe only 1%
