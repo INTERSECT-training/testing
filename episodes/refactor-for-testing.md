@@ -128,17 +128,16 @@ Change the overlap file to make the above test pass.
 ## Solution
 ```python
 def main(infile, outfile):
-dict = read_rectangles(infile)
+    dict = read_rectangles(infile)
 ...
 
 
 def read_rectangles(infile):
-result = {}
-for line in infile:
-    name, *coords = line.split()
-    result[name] = [int(c) for c in coords]
-return result
-
+    result = {}
+    for line in infile:
+    	name, *coords = line.split()
+    	result[name] = [int(c) for c in coords]
+    return result
 ```
 When you start refactoring like this go slow and in parts.  Make the function first and when the `test_read_rectangles` passes replace the code in the main method.  Your end to end test should still pass and tell you if something is wrong.  Note we can remove the comment because the function name is self documenting.
 
