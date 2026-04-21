@@ -382,39 +382,39 @@ like in normal python code. Here are some pointless tests:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># test_nothing.py</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="kw">def</span> test_math():</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    <span class="cf">assert</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="kw">def</span> test_failure():</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>    <span class="cf">assert</span> <span class="dv">0</span>  <span class="co"># zero evaluates to false</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="co"># test_nothing.py</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="kw">def</span> test_math():</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>    <span class="cf">assert</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">==</span> <span class="dv">4</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a><span class="kw">def</span> test_failure():</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a>    <span class="cf">assert</span> <span class="dv">0</span>  <span class="co"># zero evaluates to false</span></span></code></pre>
 </div>
 <p>In the same directory as your test files, run
 <code>pytest</code>:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">$</span> pytest</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="ex">==========================================</span> test session starts ==========================================</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="ex">platform</span> linux <span class="at">--</span> Python 3.9.16, pytest-7.3.1, pluggy-1.0.0</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="ex">rootdir:</span> ~/projects/testing-lesson/files</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="ex">plugins:</span> anyio-3.6.2</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="ex">collected</span> 2 items</span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="ex">test_nothing.py</span> .F                                                                                <span class="pp">[</span><span class="ss">100%</span><span class="pp">]</span></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="ex">===============================================</span> FAILURES ================================================</span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="ex">_____________________________________________</span> test_failure ______________________________________________</span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>    <span class="ex">def</span> test_failure<span class="er">(</span><span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>    <span class="op">&gt;</span>       assert <span class="ex">0</span>  <span class="co"># zero evaluates to false</span></span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    <span class="ex">E</span>       assert 0</span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="ex">test_nothing.py:5:</span> AssertionError</span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="ex">========================================</span> short test summary info ========================================</span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="ex">FAILED</span> test_nothing.py::test_failure <span class="at">-</span> assert 0</span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="ex">======================================</span> 1 failed, 1 passed in 0.06s ======================================</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">$</span> pytest</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="ex">==========================================</span> test session starts ==========================================</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="ex">platform</span> linux <span class="at">--</span> Python 3.9.16, pytest-7.3.1, pluggy-1.0.0</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="ex">rootdir:</span> ~/projects/testing-lesson/files</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a><span class="ex">plugins:</span> anyio-3.6.2</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a><span class="ex">collected</span> 2 items</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="ex">test_nothing.py</span> .F                                                                                <span class="pp">[</span><span class="ss">100%</span><span class="pp">]</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1" aria-label="code-block-2-10"></a><span class="ex">===============================================</span> FAILURES ================================================</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a><span class="ex">_____________________________________________</span> test_failure ______________________________________________</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1" aria-label="code-block-2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1" aria-label="code-block-2-13"></a>    <span class="ex">def</span> test_failure<span class="er">(</span><span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1" aria-label="code-block-2-14"></a>    <span class="op">&gt;</span>       assert <span class="ex">0</span>  <span class="co"># zero evaluates to false</span></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1" aria-label="code-block-2-15"></a>    <span class="ex">E</span>       assert 0</span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1" aria-label="code-block-2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1" aria-label="code-block-2-17"></a><span class="ex">test_nothing.py:5:</span> AssertionError</span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1" aria-label="code-block-2-18"></a><span class="ex">========================================</span> short test summary info ========================================</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1" aria-label="code-block-2-19"></a><span class="ex">FAILED</span> test_nothing.py::test_failure <span class="at">-</span> assert 0</span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1" aria-label="code-block-2-20"></a><span class="ex">======================================</span> 1 failed, 1 passed in 0.06s ======================================</span></code></pre>
 </div>
 <p>Note that two tests were found. Passing tests are marked with a green
 <code>.</code> while failures are <code>F</code> and exceptions are
@@ -428,9 +428,9 @@ Note the very obvious bug.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># sample_calc.py</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="kw">def</span> func(x):</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">-</span> <span class="dv">1</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="co"># sample_calc.py</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a><span class="kw">def</span> func(x):</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>    <span class="cf">return</span> x <span class="op">-</span> <span class="dv">1</span></span></code></pre>
 </div>
 <p>A typical test case consits of the following components: 1. A test
 input. 2. A call to the function under test with the test input. 3. A
@@ -445,41 +445,41 @@ would normally use. The test input here is 3 and the expected output is
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co">#test_sample_calc.py</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="im">import</span> sample_calc <span class="im">as</span> sc</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="kw">def</span> test_func_for_positive_int():</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>    input_value <span class="op">=</span> <span class="dv">3</span>                     <span class="co"># 1. test input</span></span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>    func_output <span class="op">=</span> sc.func(input_value)  <span class="co"># 2. call function</span></span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>    <span class="cf">assert</span> func_output <span class="op">==</span> <span class="dv">4</span>             <span class="co"># 3. compare output with expected</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co">#test_sample_calc.py</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="im">import</span> sample_calc <span class="im">as</span> sc</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="kw">def</span> test_func_for_positive_int():</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a>    input_value <span class="op">=</span> <span class="dv">3</span>                     <span class="co"># 1. test input</span></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a>    func_output <span class="op">=</span> sc.func(input_value)  <span class="co"># 2. call function</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a>    <span class="cf">assert</span> func_output <span class="op">==</span> <span class="dv">4</span>             <span class="co"># 3. compare output with expected</span></span></code></pre>
 </div>
 <p>When the test is executed it is going to fail due to the bug in
 <code>func</code>.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> pytest test_sample_calc.py </span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="ex">=============================</span> test session starts ==============================</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="ex">platform</span> darwin <span class="at">--</span> Python 3.9.12, pytest-7.1.1, pluggy-1.0.0</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="ex">rootdir:</span> /Volumes/Data/Work/research/INTERSECT2023/TestingLesson</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="ex">plugins:</span> anyio-3.5.0</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a><span class="ex">collected</span> 1 item                                                               </span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a><span class="ex">test_sample_calc.py</span> F                                                    <span class="pp">[</span><span class="ss">100%</span><span class="pp">]</span></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a></span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a><span class="ex">===================================</span> FAILURES ===================================</span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="ex">_________________________________</span> test_answer __________________________________</span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>    <span class="ex">def</span> test_answer<span class="er">(</span><span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a><span class="op">&gt;</span>       assert <span class="ex">sc.func</span><span class="er">(</span><span class="ex">3</span><span class="kw">)</span> <span class="ex">==</span> 4</span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a><span class="ex">E</span>       assert 2 == 4</span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a><span class="ex">E</span>        +  where 2 = <span class="op">&lt;</span>function func at 0x7fe290e39160<span class="op">&gt;(</span><span class="ex">3</span><span class="op">)</span></span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a><span class="ex">E</span>        +    where <span class="op">&lt;</span>function func at 0x7fe290e39160<span class="op">&gt;</span> = sc.func</span>
-<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a><span class="ex">test_sample_calc.py:4:</span> AssertionError</span>
-<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a><span class="ex">===========================</span> short test summary info ============================</span>
-<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a><span class="ex">FAILED</span> test_sample_calc.py::test_answer <span class="at">-</span> assert 2 == 4</span>
-<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a><span class="ex">==============================</span> 1 failed in 0.10s ===============================</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="ex">$</span> pytest test_sample_calc.py </span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a><span class="ex">=============================</span> test session starts ==============================</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="ex">platform</span> darwin <span class="at">--</span> Python 3.9.12, pytest-7.1.1, pluggy-1.0.0</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="ex">rootdir:</span> /Volumes/Data/Work/research/INTERSECT2023/TestingLesson</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a><span class="ex">plugins:</span> anyio-3.5.0</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a><span class="ex">collected</span> 1 item                                                               </span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a><span class="ex">test_sample_calc.py</span> F                                                    <span class="pp">[</span><span class="ss">100%</span><span class="pp">]</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a></span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a><span class="ex">===================================</span> FAILURES ===================================</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a><span class="ex">_________________________________</span> test_answer __________________________________</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a>    <span class="ex">def</span> test_answer<span class="er">(</span><span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a><span class="op">&gt;</span>       assert <span class="ex">sc.func</span><span class="er">(</span><span class="ex">3</span><span class="kw">)</span> <span class="ex">==</span> 4</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a><span class="ex">E</span>       assert 2 == 4</span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a><span class="ex">E</span>        +  where 2 = <span class="op">&lt;</span>function func at 0x7fe290e39160<span class="op">&gt;(</span><span class="ex">3</span><span class="op">)</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1" aria-label="code-block-5-17"></a><span class="ex">E</span>        +    where <span class="op">&lt;</span>function func at 0x7fe290e39160<span class="op">&gt;</span> = sc.func</span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1" aria-label="code-block-5-18"></a></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1" aria-label="code-block-5-19"></a><span class="ex">test_sample_calc.py:4:</span> AssertionError</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1" aria-label="code-block-5-20"></a><span class="ex">===========================</span> short test summary info ============================</span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1" aria-label="code-block-5-21"></a><span class="ex">FAILED</span> test_sample_calc.py::test_answer <span class="at">-</span> assert 2 == 4</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1" aria-label="code-block-5-22"></a><span class="ex">==============================</span> 1 failed in 0.10s ===============================</span></code></pre>
 </div>
 <div id="improve-the-code" class="callout challenge">
 <div class="callout-square">
@@ -509,10 +509,10 @@ of <code>x - 1</code>
 </ol><div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="cf">assert</span> sc.func(<span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="cf">assert</span> sc.func(<span class="op">-</span><span class="dv">1</span>) <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="cf">assert</span> sc.func(<span class="op">-</span><span class="dv">3</span>) <span class="op">==</span> <span class="op">-</span><span class="dv">2</span></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="cf">assert</span> sc.func(<span class="dv">10</span>) <span class="op">==</span> <span class="dv">11</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a><span class="cf">assert</span> sc.func(<span class="dv">0</span>) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a><span class="cf">assert</span> sc.func(<span class="op">-</span><span class="dv">1</span>) <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="cf">assert</span> sc.func(<span class="op">-</span><span class="dv">3</span>) <span class="op">==</span> <span class="op">-</span><span class="dv">2</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="cf">assert</span> sc.func(<span class="dv">10</span>) <span class="op">==</span> <span class="dv">11</span></span></code></pre>
 </div>
 <p>How you organize those calls is a matter of style. You could have one
 <code>test_</code> function for each or group them into a single
@@ -550,41 +550,41 @@ coverage you need to use the <code>coverage run</code> command:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">$</span> coverage run <span class="at">-m</span> pytest test_sample_calc.py </span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="ex">=============================</span> test session starts ==============================</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="ex">platform</span> darwin <span class="at">--</span> Python 3.9.12, pytest-7.1.1, pluggy-1.0.0</span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="ex">rootdir:</span> /Volumes/Data/Work/research/INTERSECT2023/TestingLesson</span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="ex">plugins:</span> anyio-3.5.0</span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="ex">collected</span> 1 item                                                               </span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a></span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="ex">test_sample_calc.py</span> F                                                    <span class="pp">[</span><span class="ss">100%</span><span class="pp">]</span></span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a><span class="ex">===================================</span> FAILURES ===================================</span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a><span class="ex">_________________________________</span> test_answer __________________________________</span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a></span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>    <span class="ex">def</span> test_answer<span class="er">(</span><span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a><span class="op">&gt;</span>       assert <span class="ex">sc.func</span><span class="er">(</span><span class="ex">3</span><span class="kw">)</span> <span class="ex">==</span> 4</span>
-<span id="cb7-15"><a href="#cb7-15" tabindex="-1"></a><span class="ex">E</span>       assert 2 == 4</span>
-<span id="cb7-16"><a href="#cb7-16" tabindex="-1"></a><span class="ex">E</span>        +  where 2 = <span class="op">&lt;</span>function func at 0x7fab8ca2be50<span class="op">&gt;(</span><span class="ex">3</span><span class="op">)</span></span>
-<span id="cb7-17"><a href="#cb7-17" tabindex="-1"></a><span class="ex">E</span>        +    where <span class="op">&lt;</span>function func at 0x7fab8ca2be50<span class="op">&gt;</span> = sc.func</span>
-<span id="cb7-18"><a href="#cb7-18" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" tabindex="-1"></a><span class="ex">test_sample_calc.py:4:</span> AssertionError</span>
-<span id="cb7-20"><a href="#cb7-20" tabindex="-1"></a><span class="ex">===========================</span> short test summary info ============================</span>
-<span id="cb7-21"><a href="#cb7-21" tabindex="-1"></a><span class="ex">FAILED</span> test_sample_calc.py::test_answer <span class="at">-</span> assert 2 == 4</span>
-<span id="cb7-22"><a href="#cb7-22" tabindex="-1"></a><span class="ex">==============================</span> 1 failed in 0.31s ===============================</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="ex">$</span> coverage run <span class="at">-m</span> pytest test_sample_calc.py </span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a><span class="ex">=============================</span> test session starts ==============================</span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a><span class="ex">platform</span> darwin <span class="at">--</span> Python 3.9.12, pytest-7.1.1, pluggy-1.0.0</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1" aria-label="code-block-7-4"></a><span class="ex">rootdir:</span> /Volumes/Data/Work/research/INTERSECT2023/TestingLesson</span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1" aria-label="code-block-7-5"></a><span class="ex">plugins:</span> anyio-3.5.0</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1" aria-label="code-block-7-6"></a><span class="ex">collected</span> 1 item                                                               </span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1" aria-label="code-block-7-7"></a></span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1" aria-label="code-block-7-8"></a><span class="ex">test_sample_calc.py</span> F                                                    <span class="pp">[</span><span class="ss">100%</span><span class="pp">]</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1" aria-label="code-block-7-9"></a></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1" aria-label="code-block-7-10"></a><span class="ex">===================================</span> FAILURES ===================================</span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1" aria-label="code-block-7-11"></a><span class="ex">_________________________________</span> test_answer __________________________________</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1" aria-label="code-block-7-12"></a></span>
+<span id="cb7-13"><a href="#cb7-13" tabindex="-1" aria-label="code-block-7-13"></a>    <span class="ex">def</span> test_answer<span class="er">(</span><span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb7-14"><a href="#cb7-14" tabindex="-1" aria-label="code-block-7-14"></a><span class="op">&gt;</span>       assert <span class="ex">sc.func</span><span class="er">(</span><span class="ex">3</span><span class="kw">)</span> <span class="ex">==</span> 4</span>
+<span id="cb7-15"><a href="#cb7-15" tabindex="-1" aria-label="code-block-7-15"></a><span class="ex">E</span>       assert 2 == 4</span>
+<span id="cb7-16"><a href="#cb7-16" tabindex="-1" aria-label="code-block-7-16"></a><span class="ex">E</span>        +  where 2 = <span class="op">&lt;</span>function func at 0x7fab8ca2be50<span class="op">&gt;(</span><span class="ex">3</span><span class="op">)</span></span>
+<span id="cb7-17"><a href="#cb7-17" tabindex="-1" aria-label="code-block-7-17"></a><span class="ex">E</span>        +    where <span class="op">&lt;</span>function func at 0x7fab8ca2be50<span class="op">&gt;</span> = sc.func</span>
+<span id="cb7-18"><a href="#cb7-18" tabindex="-1" aria-label="code-block-7-18"></a></span>
+<span id="cb7-19"><a href="#cb7-19" tabindex="-1" aria-label="code-block-7-19"></a><span class="ex">test_sample_calc.py:4:</span> AssertionError</span>
+<span id="cb7-20"><a href="#cb7-20" tabindex="-1" aria-label="code-block-7-20"></a><span class="ex">===========================</span> short test summary info ============================</span>
+<span id="cb7-21"><a href="#cb7-21" tabindex="-1" aria-label="code-block-7-21"></a><span class="ex">FAILED</span> test_sample_calc.py::test_answer <span class="at">-</span> assert 2 == 4</span>
+<span id="cb7-22"><a href="#cb7-22" tabindex="-1" aria-label="code-block-7-22"></a><span class="ex">==============================</span> 1 failed in 0.31s ===============================</span></code></pre>
 </div>
 <p>To get a report of the coverage use the command
 <code>coverage report</code>:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">$</span> coverage report</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="ex">Name</span>                  Stmts   Miss  Cover</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="ex">-----------------------------------------</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="ex">sample_calc.py</span>            2      0   100%</span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="ex">test_sample_calc.py</span>       3      0   100%</span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="ex">-----------------------------------------</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="ex">TOTAL</span>                     5      0   100%</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">$</span> coverage report</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="ex">Name</span>                  Stmts   Miss  Cover</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="ex">-----------------------------------------</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a><span class="ex">sample_calc.py</span>            2      0   100%</span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a><span class="ex">test_sample_calc.py</span>       3      0   100%</span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a><span class="ex">-----------------------------------------</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a><span class="ex">TOTAL</span>                     5      0   100%</span></code></pre>
 </div>
 <p>Note the statement coverage of sample_calc.py which is 100% right
 now. We can also specifically check for the executed branches using the
@@ -654,7 +654,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.0" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/e710c947c6d59097e1568794dd0a0041e5db067d" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/e710c947c6d59097e1568794dd0a0041e5db067d" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -677,7 +677,7 @@ any links that you are not going to use.
   "identifier": "https://INTERSECT-training.github.io/testing-lesson/test-framework-code-cov.html",
   "dateCreated": "2025-09-17",
   "dateModified": "2025-07-17",
-  "datePublished": "2026-04-14"
+  "datePublished": "2026-04-21"
 }
 
   </script><script>

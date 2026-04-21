@@ -379,14 +379,14 @@ is a useful example</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">class</span> MyDB():</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>    <span class="va">self</span>._result: <span class="bu">list</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>...</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>    <span class="kw">def</span> query(<span class="va">self</span>, something):</span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>        ...</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>        <span class="va">self</span>._result <span class="op">=</span> result</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>    <span class="kw">def</span> get_result(<span class="va">self</span>):</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">list</span>(<span class="va">self</span>._result)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="kw">class</span> MyDB():</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>    <span class="va">self</span>._result: <span class="bu">list</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>...</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a>    <span class="kw">def</span> query(<span class="va">self</span>, something):</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>        ...</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1" aria-label="code-block-1-6"></a>        <span class="va">self</span>._result <span class="op">=</span> result</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1" aria-label="code-block-1-7"></a>    <span class="kw">def</span> get_result(<span class="va">self</span>):</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1" aria-label="code-block-1-8"></a>        <span class="cf">return</span> <span class="bu">list</span>(<span class="va">self</span>._result)</span></code></pre>
 </div>
 <p>When you call <code>query</code> the result is saved in the
 <code>_result</code> attribute of the instance. When you get the result,
@@ -395,15 +395,15 @@ a copy is returned as a list.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">def</span> test_query_1():</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>    my_db <span class="op">=</span> MyDB()</span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>    my_db.query(<span class="st">'something'</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>    <span class="cf">assert</span> my_db._result <span class="op">==</span> [<span class="st">'a result'</span>]</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="kw">def</span> test_query_2():</span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>    my_db <span class="op">=</span> MyDB()</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>    my_db.query(<span class="st">'something'</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>    <span class="cf">assert</span> my_db.get_result() <span class="op">==</span> [<span class="st">'a result'</span>]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="kw">def</span> test_query_1():</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>    my_db <span class="op">=</span> MyDB()</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>    my_db.query(<span class="st">'something'</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>    <span class="cf">assert</span> my_db._result <span class="op">==</span> [<span class="st">'a result'</span>]</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a><span class="kw">def</span> test_query_2():</span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a>    my_db <span class="op">=</span> MyDB()</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a>    my_db.query(<span class="st">'something'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a>    <span class="cf">assert</span> my_db.get_result() <span class="op">==</span> [<span class="st">'a result'</span>]</span></code></pre>
 </div>
 <p>Currently, they do the same thing. One could argue the first option
 is better because it only tests the query function while the second is
@@ -440,19 +440,19 @@ to return a new rectangle when the arguments overlap, and
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="kw">def</span> test_rects_overlap():</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>    rectangles <span class="op">=</span> {</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>        <span class="st">'a'</span>: [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>],</span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>        <span class="st">'b'</span>: [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>],</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>        <span class="st">'c'</span>: [<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">11</span>],</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    }</span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'a'</span>], rectangles[<span class="st">'a'</span>]) <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'a'</span>], rectangles[<span class="st">'b'</span>]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'b'</span>], rectangles[<span class="st">'a'</span>]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'a'</span>], rectangles[<span class="st">'c'</span>]) <span class="kw">is</span> <span class="va">None</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="kw">def</span> test_rects_overlap():</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a>    rectangles <span class="op">=</span> {</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a>        <span class="st">'a'</span>: [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>],</span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a>        <span class="st">'b'</span>: [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>],</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a>        <span class="st">'c'</span>: [<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">11</span>],</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a>    }</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'a'</span>], rectangles[<span class="st">'a'</span>]) <span class="op">==</span> [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'a'</span>], rectangles[<span class="st">'b'</span>]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'b'</span>], rectangles[<span class="st">'a'</span>]) <span class="op">==</span> [<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>]</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a>    <span class="cf">assert</span> overlap.rects_overlap(rectangles[<span class="st">'a'</span>], rectangles[<span class="st">'c'</span>]) <span class="kw">is</span> <span class="va">None</span></span></code></pre>
 </div>
 <p>We are failing since the first call returns True instead of our
 list.</p>
@@ -465,22 +465,22 @@ coordinates.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Optional</span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="kw">def</span> rects_overlap(red, blue) <span class="op">-&gt;</span> Optional[<span class="bu">list</span>[<span class="bu">float</span>]]:</span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>    red_lo_x, red_lo_y, red_hi_x, red_hi_y <span class="op">=</span> red</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>    blue_lo_x, blue_lo_y, blue_hi_x, blue_hi_y <span class="op">=</span> blue</span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a>    <span class="cf">if</span> (red_lo_x <span class="op">&gt;=</span> blue_hi_x) <span class="kw">or</span> (red_hi_x <span class="op">&lt;=</span> blue_lo_x) <span class="kw">or</span> <span class="op">\</span></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>            (red_lo_y <span class="op">&gt;=</span> blue_hi_y) <span class="kw">or</span> (red_hi_y <span class="op">&lt;=</span> blue_lo_y):</span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>    x1 <span class="op">=</span> <span class="bu">max</span>(red_lo_x, blue_lo_x)</span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>    x2 <span class="op">=</span> <span class="bu">min</span>(red_hi_x, blue_hi_x)</span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>    y1 <span class="op">=</span> <span class="bu">max</span>(red_lo_y, blue_lo_y)</span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>    y2 <span class="op">=</span> <span class="bu">min</span>(red_hi_y, blue_hi_y)</span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>    <span class="cf">return</span> [x1, y1, x2, y2]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a><span class="im">from</span> typing <span class="im">import</span> Optional</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="kw">def</span> rects_overlap(red, blue) <span class="op">-&gt;</span> Optional[<span class="bu">list</span>[<span class="bu">float</span>]]:</span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a>    red_lo_x, red_lo_y, red_hi_x, red_hi_y <span class="op">=</span> red</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a>    blue_lo_x, blue_lo_y, blue_hi_x, blue_hi_y <span class="op">=</span> blue</span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a>    <span class="cf">if</span> (red_lo_x <span class="op">&gt;=</span> blue_hi_x) <span class="kw">or</span> (red_hi_x <span class="op">&lt;=</span> blue_lo_x) <span class="kw">or</span> <span class="op">\</span></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a>            (red_lo_y <span class="op">&gt;=</span> blue_hi_y) <span class="kw">or</span> (red_hi_y <span class="op">&lt;=</span> blue_lo_y):</span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1" aria-label="code-block-4-12"></a>    x1 <span class="op">=</span> <span class="bu">max</span>(red_lo_x, blue_lo_x)</span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1" aria-label="code-block-4-13"></a>    x2 <span class="op">=</span> <span class="bu">min</span>(red_hi_x, blue_hi_x)</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1" aria-label="code-block-4-14"></a>    y1 <span class="op">=</span> <span class="bu">max</span>(red_lo_y, blue_lo_y)</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1" aria-label="code-block-4-15"></a>    y2 <span class="op">=</span> <span class="bu">min</span>(red_hi_y, blue_hi_y)</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1" aria-label="code-block-4-16"></a>    <span class="cf">return</span> [x1, y1, x2, y2]</span></code></pre>
 </div>
 <p>We are passing the new <code>test_rects_overlap</code> but failing
 another 6 tests! That’s because many tests are still testing the old
@@ -495,44 +495,44 @@ the finished test method:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="at">@pytest.mark.parametrize</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="st">"rectangle_2,rectangle_str,result"</span>,</span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>    [</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>    ([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>], rectangle_strs[<span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>]),</span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    ([<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>], rectangle_strs[<span class="dv">1</span>], <span class="va">None</span>),</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    ([<span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="fl">0.5</span>, <span class="dv">0</span>], rectangle_strs[<span class="dv">2</span>], [<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="fl">0.5</span>, <span class="dv">0</span>]),</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>    ([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>], rectangle_strs[<span class="dv">3</span>], <span class="va">None</span>),</span>
-<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    ([<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>], rectangle_strs[<span class="dv">4</span>], <span class="va">None</span>),</span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    ([<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>], rectangle_strs[<span class="dv">5</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>]),</span>
-<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>    ])</span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="kw">def</span> test_rects_overlap_permutations(rectangle_2, rectangle_str, result):</span>
-<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>    rectangle_1 <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]</span>
-<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>        <span class="cf">assert</span> overlap.rects_overlap(rectangle_1, rectangle_2) <span class="op">==</span> result, (</span>
-<span id="cb5-16"><a href="#cb5-16" tabindex="-1"></a>                <span class="ss">f"Failed rects_overlap(</span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">) "</span></span>
-<span id="cb5-17"><a href="#cb5-17" tabindex="-1"></a>                <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb5-18"><a href="#cb5-18" tabindex="-1"></a></span>
-<span id="cb5-19"><a href="#cb5-19" tabindex="-1"></a>        <span class="cf">assert</span> overlap.rects_overlap(rectangle_2, rectangle_1) <span class="op">==</span> result, (</span>
-<span id="cb5-20"><a href="#cb5-20" tabindex="-1"></a>                <span class="ss">f"Failed rects_overlap(</span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">) "</span></span>
-<span id="cb5-21"><a href="#cb5-21" tabindex="-1"></a>                <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" tabindex="-1"></a>        rectangle_2 <span class="op">=</span> rotate_rectangle(rectangle_2)</span>
-<span id="cb5-24"><a href="#cb5-24" tabindex="-1"></a>        result <span class="op">=</span> rotate_rectangle(result)</span>
-<span id="cb5-25"><a href="#cb5-25" tabindex="-1"></a></span>
-<span id="cb5-26"><a href="#cb5-26" tabindex="-1"></a><span class="kw">def</span> rotate_rectangle(rectangle):</span>
-<span id="cb5-27"><a href="#cb5-27" tabindex="-1"></a>    <span class="cf">if</span> rectangle <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb5-28"><a href="#cb5-28" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb5-29"><a href="#cb5-29" tabindex="-1"></a></span>
-<span id="cb5-30"><a href="#cb5-30" tabindex="-1"></a>    x1, y1, x2, y2 <span class="op">=</span> rectangle</span>
-<span id="cb5-31"><a href="#cb5-31" tabindex="-1"></a>    x1, y1 <span class="op">=</span> y1, <span class="op">-</span>x1</span>
-<span id="cb5-32"><a href="#cb5-32" tabindex="-1"></a>    x2, y2 <span class="op">=</span> y2, <span class="op">-</span>x2</span>
-<span id="cb5-33"><a href="#cb5-33" tabindex="-1"></a></span>
-<span id="cb5-34"><a href="#cb5-34" tabindex="-1"></a>    <span class="co"># make sure x1 &lt;= x2, value = [x1, y1, x2, y2]</span></span>
-<span id="cb5-35"><a href="#cb5-35" tabindex="-1"></a>    x1, x2 <span class="op">=</span> <span class="bu">min</span>(x1, x2), <span class="bu">max</span>(x1, x2)</span>
-<span id="cb5-36"><a href="#cb5-36" tabindex="-1"></a>    y1, y2 <span class="op">=</span> <span class="bu">min</span>(y1, y2), <span class="bu">max</span>(y1, y2)</span>
-<span id="cb5-37"><a href="#cb5-37" tabindex="-1"></a></span>
-<span id="cb5-38"><a href="#cb5-38" tabindex="-1"></a>    <span class="cf">return</span> [x1, y1, x2, y2]</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="at">@pytest.mark.parametrize</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a>    <span class="st">"rectangle_2,rectangle_str,result"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a>    [</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a>    ([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>], rectangle_strs[<span class="dv">0</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>]),</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a>    ([<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>], rectangle_strs[<span class="dv">1</span>], <span class="va">None</span>),</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a>    ([<span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="fl">0.5</span>, <span class="dv">0</span>], rectangle_strs[<span class="dv">2</span>], [<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="fl">0.5</span>, <span class="dv">0</span>]),</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1" aria-label="code-block-5-7"></a>    ([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>], rectangle_strs[<span class="dv">3</span>], <span class="va">None</span>),</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1" aria-label="code-block-5-8"></a>    ([<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>], rectangle_strs[<span class="dv">4</span>], <span class="va">None</span>),</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1" aria-label="code-block-5-9"></a>    ([<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>], rectangle_strs[<span class="dv">5</span>], [<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>]),</span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1" aria-label="code-block-5-10"></a>    ])</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1" aria-label="code-block-5-11"></a><span class="kw">def</span> test_rects_overlap_permutations(rectangle_2, rectangle_str, result):</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1" aria-label="code-block-5-12"></a>    rectangle_1 <span class="op">=</span> [<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1" aria-label="code-block-5-13"></a></span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1" aria-label="code-block-5-14"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1" aria-label="code-block-5-15"></a>        <span class="cf">assert</span> overlap.rects_overlap(rectangle_1, rectangle_2) <span class="op">==</span> result, (</span>
+<span id="cb5-16"><a href="#cb5-16" tabindex="-1" aria-label="code-block-5-16"></a>                <span class="ss">f"Failed rects_overlap(</span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">) "</span></span>
+<span id="cb5-17"><a href="#cb5-17" tabindex="-1" aria-label="code-block-5-17"></a>                <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" tabindex="-1" aria-label="code-block-5-18"></a></span>
+<span id="cb5-19"><a href="#cb5-19" tabindex="-1" aria-label="code-block-5-19"></a>        <span class="cf">assert</span> overlap.rects_overlap(rectangle_2, rectangle_1) <span class="op">==</span> result, (</span>
+<span id="cb5-20"><a href="#cb5-20" tabindex="-1" aria-label="code-block-5-20"></a>                <span class="ss">f"Failed rects_overlap(</span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">) "</span></span>
+<span id="cb5-21"><a href="#cb5-21" tabindex="-1" aria-label="code-block-5-21"></a>                <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" tabindex="-1" aria-label="code-block-5-22"></a></span>
+<span id="cb5-23"><a href="#cb5-23" tabindex="-1" aria-label="code-block-5-23"></a>        rectangle_2 <span class="op">=</span> rotate_rectangle(rectangle_2)</span>
+<span id="cb5-24"><a href="#cb5-24" tabindex="-1" aria-label="code-block-5-24"></a>        result <span class="op">=</span> rotate_rectangle(result)</span>
+<span id="cb5-25"><a href="#cb5-25" tabindex="-1" aria-label="code-block-5-25"></a></span>
+<span id="cb5-26"><a href="#cb5-26" tabindex="-1" aria-label="code-block-5-26"></a><span class="kw">def</span> rotate_rectangle(rectangle):</span>
+<span id="cb5-27"><a href="#cb5-27" tabindex="-1" aria-label="code-block-5-27"></a>    <span class="cf">if</span> rectangle <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb5-28"><a href="#cb5-28" tabindex="-1" aria-label="code-block-5-28"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb5-29"><a href="#cb5-29" tabindex="-1" aria-label="code-block-5-29"></a></span>
+<span id="cb5-30"><a href="#cb5-30" tabindex="-1" aria-label="code-block-5-30"></a>    x1, y1, x2, y2 <span class="op">=</span> rectangle</span>
+<span id="cb5-31"><a href="#cb5-31" tabindex="-1" aria-label="code-block-5-31"></a>    x1, y1 <span class="op">=</span> y1, <span class="op">-</span>x1</span>
+<span id="cb5-32"><a href="#cb5-32" tabindex="-1" aria-label="code-block-5-32"></a>    x2, y2 <span class="op">=</span> y2, <span class="op">-</span>x2</span>
+<span id="cb5-33"><a href="#cb5-33" tabindex="-1" aria-label="code-block-5-33"></a></span>
+<span id="cb5-34"><a href="#cb5-34" tabindex="-1" aria-label="code-block-5-34"></a>    <span class="co"># make sure x1 &lt;= x2, value = [x1, y1, x2, y2]</span></span>
+<span id="cb5-35"><a href="#cb5-35" tabindex="-1" aria-label="code-block-5-35"></a>    x1, x2 <span class="op">=</span> <span class="bu">min</span>(x1, x2), <span class="bu">max</span>(x1, x2)</span>
+<span id="cb5-36"><a href="#cb5-36" tabindex="-1" aria-label="code-block-5-36"></a>    y1, y2 <span class="op">=</span> <span class="bu">min</span>(y1, y2), <span class="bu">max</span>(y1, y2)</span>
+<span id="cb5-37"><a href="#cb5-37" tabindex="-1" aria-label="code-block-5-37"></a></span>
+<span id="cb5-38"><a href="#cb5-38" tabindex="-1" aria-label="code-block-5-38"></a>    <span class="cf">return</span> [x1, y1, x2, y2]</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -549,7 +549,7 @@ feature of python more than any design of our system. The line</p>
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>result <span class="op">=</span> <span class="st">'1'</span> <span class="cf">if</span> rects_overlap(red_coords, blue_coords) <span class="cf">else</span> <span class="st">'0'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a>result <span class="op">=</span> <span class="st">'1'</span> <span class="cf">if</span> rects_overlap(red_coords, blue_coords) <span class="cf">else</span> <span class="st">'0'</span></span></code></pre>
 </div>
 <p>works properly because <code>None</code> evaluates as False while a
 non-empty list evaluates as True in a boolean context.</p>
@@ -586,9 +586,9 @@ overlap function with a signature like
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>result <span class="op">=</span> <span class="st">'1'</span> <span class="cf">if</span> rects_overlap(red_coords, blue_coords) <span class="cf">else</span> <span class="st">'0'</span></span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="co"># to</span></span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>overlap_area <span class="op">=</span> red_rectangle.overlap(blue_rectangle).area()</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a>result <span class="op">=</span> <span class="st">'1'</span> <span class="cf">if</span> rects_overlap(red_coords, blue_coords) <span class="cf">else</span> <span class="st">'0'</span></span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a><span class="co"># to</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1" aria-label="code-block-7-3"></a>overlap_area <span class="op">=</span> red_rectangle.overlap(blue_rectangle).area()</span></code></pre>
 </div>
 <p>We will also need to change code in our <code>read_rectangles</code>
 and <code>rects_overlap</code> functions as well as
@@ -634,24 +634,24 @@ can be created from named arguments.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="kw">def</span> test_create_rectangle_named_parameters():</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(x1<span class="op">=</span><span class="fl">1.1</span>, x2<span class="op">=</span><span class="dv">2</span>, y1<span class="op">=</span><span class="dv">4</span>, y2<span class="op">=</span><span class="dv">3</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a><span class="kw">def</span> test_create_rectangle_named_parameters():</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a>    <span class="cf">assert</span> overlap.Rectangle(x1<span class="op">=</span><span class="fl">1.1</span>, x2<span class="op">=</span><span class="dv">2</span>, y1<span class="op">=</span><span class="dv">4</span>, y2<span class="op">=</span><span class="dv">3</span>)</span></code></pre>
 </div>
 <p>Fails because there is no Rectangle object yet. To get green, we are
 going to use a python dataclass:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="at">@dataclass</span></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    x1: <span class="bu">float</span></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>    y1: <span class="bu">float</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a>    x2: <span class="bu">float</span></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a>    y2: <span class="bu">float</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1" aria-label="code-block-9-2"></a><span class="im">from</span> dataclasses <span class="im">import</span> dataclass</span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1" aria-label="code-block-9-3"></a></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1" aria-label="code-block-9-4"></a><span class="at">@dataclass</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1" aria-label="code-block-9-5"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1" aria-label="code-block-9-6"></a>    x1: <span class="bu">float</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1" aria-label="code-block-9-7"></a>    y1: <span class="bu">float</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1" aria-label="code-block-9-8"></a>    x2: <span class="bu">float</span></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1" aria-label="code-block-9-9"></a>    y2: <span class="bu">float</span></span></code></pre>
 </div>
 <p>The <code>dataclass</code> produces a default <code>__init__</code>
 and <code>__eq__</code>.</p>
@@ -659,9 +659,9 @@ and <code>__eq__</code>.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="kw">def</span> test_create_rectangle_from_list():</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="kw">def</span> test_create_rectangle_from_list():</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a>    <span class="cf">assert</span> overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span></code></pre>
 </div>
 <p>Here we are using the order of parameters matching the existing
 implementation. The code uses a bit of advanced python but should be
@@ -669,41 +669,41 @@ clear:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>    <span class="co"># ...</span></span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    <span class="at">@classmethod</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>    <span class="kw">def</span> from_list(cls, coordinates: <span class="bu">list</span>[<span class="bu">float</span>]):</span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>        x1, y1, x2, y2 <span class="op">=</span> coordinates</span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>        <span class="cf">return</span> cls(x1<span class="op">=</span>x1, y1<span class="op">=</span>y1, x2<span class="op">=</span>x2, y2<span class="op">=</span>y2)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1" aria-label="code-block-11-3"></a>    <span class="co"># ...</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1" aria-label="code-block-11-4"></a>    <span class="at">@classmethod</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1" aria-label="code-block-11-5"></a>    <span class="kw">def</span> from_list(cls, coordinates: <span class="bu">list</span>[<span class="bu">float</span>]):</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1" aria-label="code-block-11-6"></a>        x1, y1, x2, y2 <span class="op">=</span> coordinates</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1" aria-label="code-block-11-7"></a>        <span class="cf">return</span> cls(x1<span class="op">=</span>x1, y1<span class="op">=</span>y1, x2<span class="op">=</span>x2, y2<span class="op">=</span>y2)</span></code></pre>
 </div>
 <p>And let’s add a test for the incorrect number of values in the
 list:</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="kw">def</span> test_create_rectangle_from_list_wrong_number_of_args():</span>
-<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>) <span class="im">as</span> error:</span>
-<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>        overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>])</span>
-<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>    <span class="cf">assert</span> <span class="st">"Incorrect number of coordinates "</span> <span class="kw">in</span> <span class="bu">str</span>(error)</span>
-<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>) <span class="im">as</span> error:</span>
-<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>        overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>])</span>
-<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>    <span class="cf">assert</span> <span class="st">"Incorrect number of coordinates "</span> <span class="kw">in</span> <span class="bu">str</span>(error)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a><span class="kw">def</span> test_create_rectangle_from_list_wrong_number_of_args():</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>) <span class="im">as</span> error:</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a>        overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>])</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1" aria-label="code-block-12-5"></a>    <span class="cf">assert</span> <span class="st">"Incorrect number of coordinates "</span> <span class="kw">in</span> <span class="bu">str</span>(error)</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1" aria-label="code-block-12-6"></a>    <span class="cf">with</span> pytest.raises(<span class="pp">ValueError</span>) <span class="im">as</span> error:</span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1" aria-label="code-block-12-7"></a>        overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>])</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1" aria-label="code-block-12-8"></a>    <span class="cf">assert</span> <span class="st">"Incorrect number of coordinates "</span> <span class="kw">in</span> <span class="bu">str</span>(error)</span></code></pre>
 </div>
 <p>And update the code.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>    <span class="co"># ...</span></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>    <span class="at">@classmethod</span></span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>    <span class="kw">def</span> from_list(cls, coordinates: <span class="bu">list</span>[<span class="bu">float</span>]):</span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(coordinates) <span class="op">!=</span> <span class="dv">4</span>:</span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Incorrect number of coordinates for '</span><span class="sc">{</span>coordinates<span class="sc">}</span><span class="ss">'"</span>)</span>
-<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a>        x1, y1, x2, y2 <span class="op">=</span> coordinates</span>
-<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a>        <span class="cf">return</span> cls(x1<span class="op">=</span>x1, y1<span class="op">=</span>y1, x2<span class="op">=</span>x2, y2<span class="op">=</span>y2)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a>    <span class="co"># ...</span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a>    <span class="at">@classmethod</span></span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a>    <span class="kw">def</span> from_list(cls, coordinates: <span class="bu">list</span>[<span class="bu">float</span>]):</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1" aria-label="code-block-13-6"></a>        <span class="cf">if</span> <span class="bu">len</span>(coordinates) <span class="op">!=</span> <span class="dv">4</span>:</span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1" aria-label="code-block-13-7"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Incorrect number of coordinates for '</span><span class="sc">{</span>coordinates<span class="sc">}</span><span class="ss">'"</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" tabindex="-1" aria-label="code-block-13-8"></a>        x1, y1, x2, y2 <span class="op">=</span> coordinates</span>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1" aria-label="code-block-13-9"></a>        <span class="cf">return</span> cls(x1<span class="op">=</span>x1, y1<span class="op">=</span>y1, x2<span class="op">=</span>x2, y2<span class="op">=</span>y2)</span></code></pre>
 </div>
 <p>Notice that we now have some code duplication since we use the same
 check in <code>read_rectangles</code>. But we can’t remove it until we
@@ -716,14 +716,14 @@ they are what we expect:</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a><span class="kw">def</span> test_create_rectangle_named_parameters():</span>
-<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span>
-<span id="cb14-4"><a href="#cb14-4" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(x1<span class="op">=</span><span class="fl">1.1</span>, x2<span class="op">=</span><span class="dv">2</span>, y1<span class="op">=</span><span class="dv">4</span>, y2<span class="op">=</span><span class="dv">3</span>) <span class="op">==</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span>
-<span id="cb14-5"><a href="#cb14-5" tabindex="-1"></a></span>
-<span id="cb14-6"><a href="#cb14-6" tabindex="-1"></a></span>
-<span id="cb14-7"><a href="#cb14-7" tabindex="-1"></a><span class="kw">def</span> test_create_rectangle_from_list():</span>
-<span id="cb14-8"><a href="#cb14-8" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>]) <span class="op">==</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1" aria-label="code-block-14-2"></a><span class="kw">def</span> test_create_rectangle_named_parameters():</span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1" aria-label="code-block-14-3"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" tabindex="-1" aria-label="code-block-14-4"></a>    <span class="cf">assert</span> overlap.Rectangle(x1<span class="op">=</span><span class="fl">1.1</span>, x2<span class="op">=</span><span class="dv">2</span>, y1<span class="op">=</span><span class="dv">4</span>, y2<span class="op">=</span><span class="dv">3</span>) <span class="op">==</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" tabindex="-1" aria-label="code-block-14-5"></a></span>
+<span id="cb14-6"><a href="#cb14-6" tabindex="-1" aria-label="code-block-14-6"></a></span>
+<span id="cb14-7"><a href="#cb14-7" tabindex="-1" aria-label="code-block-14-7"></a><span class="kw">def</span> test_create_rectangle_from_list():</span>
+<span id="cb14-8"><a href="#cb14-8" tabindex="-1" aria-label="code-block-14-8"></a>    <span class="cf">assert</span> overlap.Rectangle.from_list([<span class="fl">1.1</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">3</span>]) <span class="op">==</span> overlap.Rectangle(<span class="fl">1.1</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">4</span>)</span></code></pre>
 </div>
 <p>Here we use unnamed parameters during initialization to check for
 equality. The order of attributes in the dataclass determines the order
@@ -737,17 +737,17 @@ attributes.</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a><span class="at">@dataclass</span></span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>    x1: <span class="bu">float</span></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a>    y1: <span class="bu">float</span></span>
-<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a>    x2: <span class="bu">float</span></span>
-<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a>    y2: <span class="bu">float</span></span>
-<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a>    <span class="kw">def</span> __post_init__(<span class="va">self</span>):</span>
-<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a>        <span class="va">self</span>.x1, <span class="va">self</span>.x2 <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x1, <span class="va">self</span>.x2), <span class="bu">max</span>(<span class="va">self</span>.x1, <span class="va">self</span>.x2)</span>
-<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a>        <span class="va">self</span>.y1, <span class="va">self</span>.y2 <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.y1, <span class="va">self</span>.y2), <span class="bu">max</span>(<span class="va">self</span>.y1, <span class="va">self</span>.y2)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a><span class="at">@dataclass</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1" aria-label="code-block-15-4"></a>    x1: <span class="bu">float</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1" aria-label="code-block-15-5"></a>    y1: <span class="bu">float</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1" aria-label="code-block-15-6"></a>    x2: <span class="bu">float</span></span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1" aria-label="code-block-15-7"></a>    y2: <span class="bu">float</span></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1" aria-label="code-block-15-8"></a></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1" aria-label="code-block-15-9"></a>    <span class="kw">def</span> __post_init__(<span class="va">self</span>):</span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1" aria-label="code-block-15-10"></a>        <span class="va">self</span>.x1, <span class="va">self</span>.x2 <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.x1, <span class="va">self</span>.x2), <span class="bu">max</span>(<span class="va">self</span>.x1, <span class="va">self</span>.x2)</span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1" aria-label="code-block-15-11"></a>        <span class="va">self</span>.y1, <span class="va">self</span>.y2 <span class="op">=</span> <span class="bu">min</span>(<span class="va">self</span>.y1, <span class="va">self</span>.y2), <span class="bu">max</span>(<span class="va">self</span>.y1, <span class="va">self</span>.y2)</span></code></pre>
 </div>
 <p>Note this also fixes the issue with <code>from_list</code> as it
 calls <code>__init__</code> as well. If we later decide to add an
@@ -761,26 +761,26 @@ intended.</p>
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="kw">def</span> test_rectangle_area():</span>
-<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>).area() <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>).area() <span class="op">==</span> <span class="dv">2</span></span>
-<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>).area() <span class="op">==</span> <span class="dv">2</span></span>
-<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>).area() <span class="op">==</span> <span class="dv">0</span></span>
-<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.3</span>, <span class="fl">0.3</span>).area() <span class="op">==</span> <span class="fl">0.09</span></span>
-<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="fl">0.1</span>, <span class="dv">0</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>).area() <span class="op">==</span> <span class="fl">0.09</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1" aria-label="code-block-16-2"></a><span class="kw">def</span> test_rectangle_area():</span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1" aria-label="code-block-16-3"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>).area() <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1" aria-label="code-block-16-4"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>).area() <span class="op">==</span> <span class="dv">2</span></span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1" aria-label="code-block-16-5"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>).area() <span class="op">==</span> <span class="dv">2</span></span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1" aria-label="code-block-16-6"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>).area() <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1" aria-label="code-block-16-7"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.3</span>, <span class="fl">0.3</span>).area() <span class="op">==</span> <span class="fl">0.09</span></span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1" aria-label="code-block-16-8"></a>    <span class="cf">assert</span> overlap.Rectangle(<span class="fl">0.1</span>, <span class="dv">0</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>).area() <span class="op">==</span> <span class="fl">0.09</span></span></code></pre>
 </div>
 <p>The code shouldn’t be too surprising:</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a><span class="at">@dataclass</span></span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
-<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a>    ...</span>
-<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a></span>
-<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a>    <span class="kw">def</span> area(<span class="va">self</span>):</span>
-<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a>        <span class="cf">return</span> (<span class="va">self</span>.x2<span class="op">-</span><span class="va">self</span>.x1) <span class="op">*</span> (<span class="va">self</span>.y2<span class="op">-</span><span class="va">self</span>.y1)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a><span class="at">@dataclass</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a>    ...</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1" aria-label="code-block-17-5"></a></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1" aria-label="code-block-17-6"></a>    <span class="kw">def</span> area(<span class="va">self</span>):</span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1" aria-label="code-block-17-7"></a>        <span class="cf">return</span> (<span class="va">self</span>.x2<span class="op">-</span><span class="va">self</span>.x1) <span class="op">*</span> (<span class="va">self</span>.y2<span class="op">-</span><span class="va">self</span>.y1)</span></code></pre>
 </div>
 <p>But you may be surprised that the last assert is failing, even though
 the second to last is passing. Again we are struck by the limits of
@@ -808,7 +808,7 @@ floating point precision.</p>
 <div class="codewrapper sourceCode" id="cb18">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a><span class="cf">assert</span> overlap.Rectangle(<span class="fl">0.1</span>, <span class="dv">0</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>).area() <span class="op">==</span> pytest.approx(<span class="fl">0.09</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" tabindex="-1" aria-label="code-block-18-1"></a><span class="cf">assert</span> overlap.Rectangle(<span class="fl">0.1</span>, <span class="dv">0</span>, <span class="fl">0.4</span>, <span class="fl">0.3</span>).area() <span class="op">==</span> pytest.approx(<span class="fl">0.09</span>)</span></code></pre>
 </div>
 <p>To be thorough, you should approximate the line above as well. While
 it doesn’t fail here, a different machine may have different
@@ -849,18 +849,18 @@ function with a Rectangle method with the following signature
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a><span class="kw">def</span> test_rectangle_overlap():</span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>    rectangles <span class="op">=</span> {</span>
-<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>        <span class="st">'a'</span>: overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
-<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a>        <span class="st">'b'</span>: overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>),</span>
-<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a>        <span class="st">'c'</span>: overlap.Rectangle(<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">11</span>),</span>
-<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a>    }</span>
-<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a></span>
-<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a>    <span class="cf">assert</span> rectangles[<span class="st">'a'</span>].overlap(rectangles[<span class="st">'a'</span>]) <span class="op">==</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb19-10"><a href="#cb19-10" tabindex="-1"></a>    <span class="cf">assert</span> rectangles[<span class="st">'a'</span>].overlap(rectangles[<span class="st">'b'</span>]) <span class="op">==</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb19-11"><a href="#cb19-11" tabindex="-1"></a>    <span class="cf">assert</span> rectangles[<span class="st">'b'</span>].overlap(rectangles[<span class="st">'a'</span>]) <span class="op">==</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
-<span id="cb19-12"><a href="#cb19-12" tabindex="-1"></a>    <span class="cf">assert</span> rectangles[<span class="st">'a'</span>].overlap(rectangles[<span class="st">'c'</span>]) <span class="kw">is</span> <span class="va">None</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a><span class="kw">def</span> test_rectangle_overlap():</span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a>    rectangles <span class="op">=</span> {</span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1" aria-label="code-block-19-4"></a>        <span class="st">'a'</span>: overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1" aria-label="code-block-19-5"></a>        <span class="st">'b'</span>: overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>),</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1" aria-label="code-block-19-6"></a>        <span class="st">'c'</span>: overlap.Rectangle(<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">11</span>),</span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1" aria-label="code-block-19-7"></a>    }</span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1" aria-label="code-block-19-8"></a></span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1" aria-label="code-block-19-9"></a>    <span class="cf">assert</span> rectangles[<span class="st">'a'</span>].overlap(rectangles[<span class="st">'a'</span>]) <span class="op">==</span> overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb19-10"><a href="#cb19-10" tabindex="-1" aria-label="code-block-19-10"></a>    <span class="cf">assert</span> rectangles[<span class="st">'a'</span>].overlap(rectangles[<span class="st">'b'</span>]) <span class="op">==</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb19-11"><a href="#cb19-11" tabindex="-1" aria-label="code-block-19-11"></a>    <span class="cf">assert</span> rectangles[<span class="st">'b'</span>].overlap(rectangles[<span class="st">'a'</span>]) <span class="op">==</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb19-12"><a href="#cb19-12" tabindex="-1" aria-label="code-block-19-12"></a>    <span class="cf">assert</span> rectangles[<span class="st">'a'</span>].overlap(rectangles[<span class="st">'c'</span>]) <span class="kw">is</span> <span class="va">None</span></span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -870,23 +870,23 @@ to variable names.</p>
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
-<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>    ...</span>
-<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a>    <span class="kw">def</span> overlap(<span class="va">self</span>, other):</span>
-<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a>        <span class="cf">if</span> (<span class="va">self</span>.x1 <span class="op">&gt;=</span> other.x2) <span class="kw">or</span> <span class="op">\</span></span>
-<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a>                (<span class="va">self</span>.x2 <span class="op">&lt;=</span> other.x1) <span class="kw">or</span> <span class="op">\</span></span>
-<span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a>                (<span class="va">self</span>.y1 <span class="op">&gt;=</span> other.y2) <span class="kw">or</span> <span class="op">\</span></span>
-<span id="cb20-9"><a href="#cb20-9" tabindex="-1"></a>                (<span class="va">self</span>.y2 <span class="op">&lt;=</span> other.y1):</span>
-<span id="cb20-10"><a href="#cb20-10" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb20-11"><a href="#cb20-11" tabindex="-1"></a></span>
-<span id="cb20-12"><a href="#cb20-12" tabindex="-1"></a>        <span class="cf">return</span> Rectangle(</span>
-<span id="cb20-13"><a href="#cb20-13" tabindex="-1"></a>            x1<span class="op">=</span><span class="bu">max</span>(<span class="va">self</span>.x1, other.x1),</span>
-<span id="cb20-14"><a href="#cb20-14" tabindex="-1"></a>            y1<span class="op">=</span><span class="bu">max</span>(<span class="va">self</span>.y1, other.y1),</span>
-<span id="cb20-15"><a href="#cb20-15" tabindex="-1"></a>            x2<span class="op">=</span><span class="bu">min</span>(<span class="va">self</span>.x2, other.x2),</span>
-<span id="cb20-16"><a href="#cb20-16" tabindex="-1"></a>            y2<span class="op">=</span><span class="bu">min</span>(<span class="va">self</span>.y2, other.y2),</span>
-<span id="cb20-17"><a href="#cb20-17" tabindex="-1"></a>        )</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" tabindex="-1" aria-label="code-block-20-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1" aria-label="code-block-20-2"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1" aria-label="code-block-20-3"></a>    ...</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1" aria-label="code-block-20-4"></a></span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1" aria-label="code-block-20-5"></a>    <span class="kw">def</span> overlap(<span class="va">self</span>, other):</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1" aria-label="code-block-20-6"></a>        <span class="cf">if</span> (<span class="va">self</span>.x1 <span class="op">&gt;=</span> other.x2) <span class="kw">or</span> <span class="op">\</span></span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1" aria-label="code-block-20-7"></a>                (<span class="va">self</span>.x2 <span class="op">&lt;=</span> other.x1) <span class="kw">or</span> <span class="op">\</span></span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1" aria-label="code-block-20-8"></a>                (<span class="va">self</span>.y1 <span class="op">&gt;=</span> other.y2) <span class="kw">or</span> <span class="op">\</span></span>
+<span id="cb20-9"><a href="#cb20-9" tabindex="-1" aria-label="code-block-20-9"></a>                (<span class="va">self</span>.y2 <span class="op">&lt;=</span> other.y1):</span>
+<span id="cb20-10"><a href="#cb20-10" tabindex="-1" aria-label="code-block-20-10"></a>            <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb20-11"><a href="#cb20-11" tabindex="-1" aria-label="code-block-20-11"></a></span>
+<span id="cb20-12"><a href="#cb20-12" tabindex="-1" aria-label="code-block-20-12"></a>        <span class="cf">return</span> Rectangle(</span>
+<span id="cb20-13"><a href="#cb20-13" tabindex="-1" aria-label="code-block-20-13"></a>            x1<span class="op">=</span><span class="bu">max</span>(<span class="va">self</span>.x1, other.x1),</span>
+<span id="cb20-14"><a href="#cb20-14" tabindex="-1" aria-label="code-block-20-14"></a>            y1<span class="op">=</span><span class="bu">max</span>(<span class="va">self</span>.y1, other.y1),</span>
+<span id="cb20-15"><a href="#cb20-15" tabindex="-1" aria-label="code-block-20-15"></a>            x2<span class="op">=</span><span class="bu">min</span>(<span class="va">self</span>.x2, other.x2),</span>
+<span id="cb20-16"><a href="#cb20-16" tabindex="-1" aria-label="code-block-20-16"></a>            y2<span class="op">=</span><span class="bu">min</span>(<span class="va">self</span>.y2, other.y2),</span>
+<span id="cb20-17"><a href="#cb20-17" tabindex="-1" aria-label="code-block-20-17"></a>        )</span></code></pre>
 </div>
 <p>This was after refactoring to get rid of extra variables. Since we
 can use named arguments for new rectangles, we don’t have to set
@@ -907,21 +907,21 @@ script.</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a><span class="kw">def</span> test_rotate_rectangle():</span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>    rectangle <span class="op">=</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
-<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>)</span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a></span>
-<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
-<span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>)</span>
-<span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="op">-</span><span class="dv">3</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>)</span>
-<span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a></span>
-<span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
-<span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a><span class="kw">def</span> test_rotate_rectangle():</span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a>    rectangle <span class="op">=</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1" aria-label="code-block-21-4"></a></span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1" aria-label="code-block-21-5"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1" aria-label="code-block-21-6"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="dv">2</span>, <span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1" aria-label="code-block-21-7"></a></span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1" aria-label="code-block-21-8"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
+<span id="cb21-9"><a href="#cb21-9" tabindex="-1" aria-label="code-block-21-9"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">3</span>, <span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>)</span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1" aria-label="code-block-21-10"></a></span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1" aria-label="code-block-21-11"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
+<span id="cb21-12"><a href="#cb21-12" tabindex="-1" aria-label="code-block-21-12"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="op">-</span><span class="dv">3</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" tabindex="-1" aria-label="code-block-21-13"></a></span>
+<span id="cb21-14"><a href="#cb21-14" tabindex="-1" aria-label="code-block-21-14"></a>    rectangle <span class="op">=</span> rectangle.rotate()</span>
+<span id="cb21-15"><a href="#cb21-15" tabindex="-1" aria-label="code-block-21-15"></a>    <span class="cf">assert</span> rectangle <span class="op">==</span> overlap.Rectangle(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre>
 </div>
 <p>The special case when <code>Rectangle</code> is None is not handled
 anymore since you can’t call the method <code>rotate</code> on a None
@@ -929,17 +929,17 @@ object.</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb22-2"><a href="#cb22-2" tabindex="-1"></a><span class="kw">class</span> Rectangle:</span>
-<span id="cb22-3"><a href="#cb22-3" tabindex="-1"></a>    ...</span>
-<span id="cb22-4"><a href="#cb22-4" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" tabindex="-1"></a>    <span class="kw">def</span> rotate(<span class="va">self</span>):</span>
-<span id="cb22-6"><a href="#cb22-6" tabindex="-1"></a>        <span class="cf">return</span> Rectangle(</span>
-<span id="cb22-7"><a href="#cb22-7" tabindex="-1"></a>            x1<span class="op">=</span><span class="va">self</span>.y1,</span>
-<span id="cb22-8"><a href="#cb22-8" tabindex="-1"></a>            y1<span class="op">=-</span><span class="va">self</span>.x1,</span>
-<span id="cb22-9"><a href="#cb22-9" tabindex="-1"></a>            x2<span class="op">=</span><span class="va">self</span>.y2,</span>
-<span id="cb22-10"><a href="#cb22-10" tabindex="-1"></a>            y2<span class="op">=-</span><span class="va">self</span>.x2,</span>
-<span id="cb22-11"><a href="#cb22-11" tabindex="-1"></a>        )</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb22-2"><a href="#cb22-2" tabindex="-1" aria-label="code-block-22-2"></a><span class="kw">class</span> Rectangle:</span>
+<span id="cb22-3"><a href="#cb22-3" tabindex="-1" aria-label="code-block-22-3"></a>    ...</span>
+<span id="cb22-4"><a href="#cb22-4" tabindex="-1" aria-label="code-block-22-4"></a></span>
+<span id="cb22-5"><a href="#cb22-5" tabindex="-1" aria-label="code-block-22-5"></a>    <span class="kw">def</span> rotate(<span class="va">self</span>):</span>
+<span id="cb22-6"><a href="#cb22-6" tabindex="-1" aria-label="code-block-22-6"></a>        <span class="cf">return</span> Rectangle(</span>
+<span id="cb22-7"><a href="#cb22-7" tabindex="-1" aria-label="code-block-22-7"></a>            x1<span class="op">=</span><span class="va">self</span>.y1,</span>
+<span id="cb22-8"><a href="#cb22-8" tabindex="-1" aria-label="code-block-22-8"></a>            y1<span class="op">=-</span><span class="va">self</span>.x1,</span>
+<span id="cb22-9"><a href="#cb22-9" tabindex="-1" aria-label="code-block-22-9"></a>            x2<span class="op">=</span><span class="va">self</span>.y2,</span>
+<span id="cb22-10"><a href="#cb22-10" tabindex="-1" aria-label="code-block-22-10"></a>            y2<span class="op">=-</span><span class="va">self</span>.x2,</span>
+<span id="cb22-11"><a href="#cb22-11" tabindex="-1" aria-label="code-block-22-11"></a>        )</span></code></pre>
 </div>
 <p>That is <em>much</em> cleaner than the last version. Now to handle
 our <code>None</code> rectangles, we will keep our
@@ -948,37 +948,37 @@ our method dispatch and modify our test:</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a><span class="kw">def</span> rotate_rectangle(rectangle):</span>
-<span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a>    <span class="cf">if</span> rectangle <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">None</span></span>
-<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a>    <span class="cf">return</span> rectangle.rotate()</span>
-<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a>...</span>
-<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a><span class="at">@pytest.mark.parametrize</span>(</span>
-<span id="cb23-9"><a href="#cb23-9" tabindex="-1"></a>    <span class="st">"rectangle_2,rectangle_str,result"</span>,</span>
-<span id="cb23-10"><a href="#cb23-10" tabindex="-1"></a>    [</span>
-<span id="cb23-11"><a href="#cb23-11" tabindex="-1"></a>        (overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>), rectangle_strs[<span class="dv">0</span>], overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>)),</span>
-<span id="cb23-12"><a href="#cb23-12" tabindex="-1"></a>        (overlap.Rectangle(<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>), rectangle_strs[<span class="dv">1</span>], <span class="va">None</span>),</span>
-<span id="cb23-13"><a href="#cb23-13" tabindex="-1"></a>        (overlap.Rectangle(<span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="fl">0.5</span>, <span class="dv">0</span>), rectangle_strs[<span class="dv">2</span>], overlap.Rectangle(<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="fl">0.5</span>, <span class="dv">0</span>)),</span>
-<span id="cb23-14"><a href="#cb23-14" tabindex="-1"></a>        (overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>), rectangle_strs[<span class="dv">3</span>], <span class="va">None</span>),</span>
-<span id="cb23-15"><a href="#cb23-15" tabindex="-1"></a>        (overlap.Rectangle(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>), rectangle_strs[<span class="dv">4</span>], <span class="va">None</span>),</span>
-<span id="cb23-16"><a href="#cb23-16" tabindex="-1"></a>        (overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), rectangle_strs[<span class="dv">5</span>], overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>)),</span>
-<span id="cb23-17"><a href="#cb23-17" tabindex="-1"></a>    ])</span>
-<span id="cb23-18"><a href="#cb23-18" tabindex="-1"></a><span class="kw">def</span> test_rectangles_overlap_permutations(rectangle_2, rectangle_str, result):</span>
-<span id="cb23-19"><a href="#cb23-19" tabindex="-1"></a>    rectangle_1 <span class="op">=</span> overlap.Rectangle(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb23-20"><a href="#cb23-20" tabindex="-1"></a></span>
-<span id="cb23-21"><a href="#cb23-21" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
-<span id="cb23-22"><a href="#cb23-22" tabindex="-1"></a>        <span class="cf">assert</span> rectangle_1.overlap(rectangle_2) <span class="op">==</span> result, (</span>
-<span id="cb23-23"><a href="#cb23-23" tabindex="-1"></a>            <span class="ss">f"Failed </span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">.overlap(</span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">) "</span></span>
-<span id="cb23-24"><a href="#cb23-24" tabindex="-1"></a>            <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb23-25"><a href="#cb23-25" tabindex="-1"></a></span>
-<span id="cb23-26"><a href="#cb23-26" tabindex="-1"></a>        <span class="cf">assert</span> rectangle_2.overlap(rectangle_1) <span class="op">==</span> result, (</span>
-<span id="cb23-27"><a href="#cb23-27" tabindex="-1"></a>            <span class="ss">f"Failed </span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">.overlap(</span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">) "</span></span>
-<span id="cb23-28"><a href="#cb23-28" tabindex="-1"></a>            <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb23-29"><a href="#cb23-29" tabindex="-1"></a></span>
-<span id="cb23-30"><a href="#cb23-30" tabindex="-1"></a>        rectangle_2 <span class="op">=</span> rotate_rectangle(rectangle_2)</span>
-<span id="cb23-31"><a href="#cb23-31" tabindex="-1"></a>        result <span class="op">=</span> rotate_rectangle(result)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a><span class="kw">def</span> rotate_rectangle(rectangle):</span>
+<span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a>    <span class="cf">if</span> rectangle <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a>        <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a>    <span class="cf">return</span> rectangle.rotate()</span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a></span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1" aria-label="code-block-23-7"></a>...</span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1" aria-label="code-block-23-8"></a><span class="at">@pytest.mark.parametrize</span>(</span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1" aria-label="code-block-23-9"></a>    <span class="st">"rectangle_2,rectangle_str,result"</span>,</span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1" aria-label="code-block-23-10"></a>    [</span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1" aria-label="code-block-23-11"></a>        (overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>), rectangle_strs[<span class="dv">0</span>], overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">1</span>)),</span>
+<span id="cb23-12"><a href="#cb23-12" tabindex="-1" aria-label="code-block-23-12"></a>        (overlap.Rectangle(<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>), rectangle_strs[<span class="dv">1</span>], <span class="va">None</span>),</span>
+<span id="cb23-13"><a href="#cb23-13" tabindex="-1" aria-label="code-block-23-13"></a>        (overlap.Rectangle(<span class="dv">0</span>, <span class="op">-</span><span class="dv">2</span>, <span class="fl">0.5</span>, <span class="dv">0</span>), rectangle_strs[<span class="dv">2</span>], overlap.Rectangle(<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="fl">0.5</span>, <span class="dv">0</span>)),</span>
+<span id="cb23-14"><a href="#cb23-14" tabindex="-1" aria-label="code-block-23-14"></a>        (overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>), rectangle_strs[<span class="dv">3</span>], <span class="va">None</span>),</span>
+<span id="cb23-15"><a href="#cb23-15" tabindex="-1" aria-label="code-block-23-15"></a>        (overlap.Rectangle(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">3</span>), rectangle_strs[<span class="dv">4</span>], <span class="va">None</span>),</span>
+<span id="cb23-16"><a href="#cb23-16" tabindex="-1" aria-label="code-block-23-16"></a>        (overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), rectangle_strs[<span class="dv">5</span>], overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>)),</span>
+<span id="cb23-17"><a href="#cb23-17" tabindex="-1" aria-label="code-block-23-17"></a>    ])</span>
+<span id="cb23-18"><a href="#cb23-18" tabindex="-1" aria-label="code-block-23-18"></a><span class="kw">def</span> test_rectangles_overlap_permutations(rectangle_2, rectangle_str, result):</span>
+<span id="cb23-19"><a href="#cb23-19" tabindex="-1" aria-label="code-block-23-19"></a>    rectangle_1 <span class="op">=</span> overlap.Rectangle(<span class="op">-</span><span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb23-20"><a href="#cb23-20" tabindex="-1" aria-label="code-block-23-20"></a></span>
+<span id="cb23-21"><a href="#cb23-21" tabindex="-1" aria-label="code-block-23-21"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">4</span>):</span>
+<span id="cb23-22"><a href="#cb23-22" tabindex="-1" aria-label="code-block-23-22"></a>        <span class="cf">assert</span> rectangle_1.overlap(rectangle_2) <span class="op">==</span> result, (</span>
+<span id="cb23-23"><a href="#cb23-23" tabindex="-1" aria-label="code-block-23-23"></a>            <span class="ss">f"Failed </span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">.overlap(</span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">) "</span></span>
+<span id="cb23-24"><a href="#cb23-24" tabindex="-1" aria-label="code-block-23-24"></a>            <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-25"><a href="#cb23-25" tabindex="-1" aria-label="code-block-23-25"></a></span>
+<span id="cb23-26"><a href="#cb23-26" tabindex="-1" aria-label="code-block-23-26"></a>        <span class="cf">assert</span> rectangle_2.overlap(rectangle_1) <span class="op">==</span> result, (</span>
+<span id="cb23-27"><a href="#cb23-27" tabindex="-1" aria-label="code-block-23-27"></a>            <span class="ss">f"Failed </span><span class="sc">{</span>rectangle_2<span class="sc">}</span><span class="ss">.overlap(</span><span class="sc">{</span>rectangle_1<span class="sc">}</span><span class="ss">) "</span></span>
+<span id="cb23-28"><a href="#cb23-28" tabindex="-1" aria-label="code-block-23-28"></a>            <span class="ss">f"on rotation </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">. </span><span class="sc">{</span>rectangle_str<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb23-29"><a href="#cb23-29" tabindex="-1" aria-label="code-block-23-29"></a></span>
+<span id="cb23-30"><a href="#cb23-30" tabindex="-1" aria-label="code-block-23-30"></a>        rectangle_2 <span class="op">=</span> rotate_rectangle(rectangle_2)</span>
+<span id="cb23-31"><a href="#cb23-31" tabindex="-1" aria-label="code-block-23-31"></a>        result <span class="op">=</span> rotate_rectangle(result)</span></code></pre>
 </div>
 <p>And we can almost get rid of <code>rects_overlap</code> entirely.
 It’s not in our tests, but we do use it in our main script. The last
@@ -1013,14 +1013,14 @@ refactor.</p>
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a><span class="kw">def</span> test_read_rectangles_simple(simple_input):</span>
-<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>    rectangles <span class="op">=</span> overlap.read_rectangles(simple_input)</span>
-<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>    <span class="cf">assert</span> rectangles <span class="op">==</span> {</span>
-<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a>        <span class="st">'a'</span>: overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
-<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a>        <span class="st">'b'</span>: overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>),</span>
-<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a>        <span class="st">'c'</span>: overlap.Rectangle(<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">11</span>),</span>
-<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a>    }</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" tabindex="-1" aria-label="code-block-24-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1" aria-label="code-block-24-2"></a><span class="kw">def</span> test_read_rectangles_simple(simple_input):</span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1" aria-label="code-block-24-3"></a>    rectangles <span class="op">=</span> overlap.read_rectangles(simple_input)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1" aria-label="code-block-24-4"></a>    <span class="cf">assert</span> rectangles <span class="op">==</span> {</span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1" aria-label="code-block-24-5"></a>        <span class="st">'a'</span>: overlap.Rectangle(<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">2</span>),</span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1" aria-label="code-block-24-6"></a>        <span class="st">'b'</span>: overlap.Rectangle(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">3</span>),</span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1" aria-label="code-block-24-7"></a>        <span class="st">'c'</span>: overlap.Rectangle(<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">11</span>),</span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1" aria-label="code-block-24-8"></a>    }</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1031,19 +1031,19 @@ coordinates can be removed as that’s now handled by
 <div class="codewrapper sourceCode" id="cb25">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a><span class="kw">def</span> read_rectangles(rectangles: Iterable[<span class="bu">str</span>]) <span class="op">-&gt;</span> <span class="bu">dict</span>[<span class="bu">str</span>, Rectangle]:</span>
-<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>    result <span class="op">=</span> {}</span>
-<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>    <span class="cf">for</span> rectangle <span class="kw">in</span> rectangles:</span>
-<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a>        name, <span class="op">*</span>coords <span class="op">=</span> rectangle.split()</span>
-<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a>        <span class="cf">try</span>:</span>
-<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a>            value <span class="op">=</span> [<span class="bu">float</span>(c) <span class="cf">for</span> c <span class="kw">in</span> coords]</span>
-<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a>        <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
-<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Non numeric value provided as input for '</span><span class="sc">{</span>rectangle<span class="sc">}</span><span class="ss">'"</span>)</span>
-<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a></span>
-<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a>        result[name] <span class="op">=</span> Rectangle.from_list(value)</span>
-<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a></span>
-<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" tabindex="-1" aria-label="code-block-25-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1" aria-label="code-block-25-2"></a><span class="kw">def</span> read_rectangles(rectangles: Iterable[<span class="bu">str</span>]) <span class="op">-&gt;</span> <span class="bu">dict</span>[<span class="bu">str</span>, Rectangle]:</span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1" aria-label="code-block-25-3"></a>    result <span class="op">=</span> {}</span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1" aria-label="code-block-25-4"></a>    <span class="cf">for</span> rectangle <span class="kw">in</span> rectangles:</span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1" aria-label="code-block-25-5"></a>        name, <span class="op">*</span>coords <span class="op">=</span> rectangle.split()</span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1" aria-label="code-block-25-6"></a>        <span class="cf">try</span>:</span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1" aria-label="code-block-25-7"></a>            value <span class="op">=</span> [<span class="bu">float</span>(c) <span class="cf">for</span> c <span class="kw">in</span> coords]</span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1" aria-label="code-block-25-8"></a>        <span class="cf">except</span> <span class="pp">ValueError</span>:</span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1" aria-label="code-block-25-9"></a>            <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"Non numeric value provided as input for '</span><span class="sc">{</span>rectangle<span class="sc">}</span><span class="ss">'"</span>)</span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1" aria-label="code-block-25-10"></a></span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1" aria-label="code-block-25-11"></a>        result[name] <span class="op">=</span> Rectangle.from_list(value)</span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1" aria-label="code-block-25-12"></a></span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1" aria-label="code-block-25-13"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
 <p>This is not a real green since other tests are failing, but at least
 <code>test_read_rectangles_simple</code> is passing. ### Refactor You
@@ -1065,7 +1065,7 @@ prudent to extract the line</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>result <span class="op">=</span> <span class="st">'1'</span> <span class="cf">if</span> red_rect.overlap(blue_rect) <span class="cf">else</span> <span class="st">'0'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1" aria-label="code-block-26-1"></a>result <span class="op">=</span> <span class="st">'1'</span> <span class="cf">if</span> red_rect.overlap(blue_rect) <span class="cf">else</span> <span class="st">'0'</span></span></code></pre>
 </div>
 <p>into a separate function to exercise it more fully, but for now we
 will leave it.</p>
@@ -1097,18 +1097,18 @@ elsewhere.</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># test_overlap.py</span></span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="kw">def</span> test_end_to_end(simple_input):</span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>    <span class="co"># initialize a StringIO with a string to read from</span></span>
-<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a>    infile <span class="op">=</span> simple_input</span>
-<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>    <span class="co"># this holds our output</span></span>
-<span id="cb27-6"><a href="#cb27-6" tabindex="-1"></a>    outfile <span class="op">=</span> StringIO()</span>
-<span id="cb27-7"><a href="#cb27-7" tabindex="-1"></a>    <span class="co"># call the function</span></span>
-<span id="cb27-8"><a href="#cb27-8" tabindex="-1"></a>    overlap.main(infile, outfile)</span>
-<span id="cb27-9"><a href="#cb27-9" tabindex="-1"></a>    output <span class="op">=</span> outfile.getvalue().split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
-<span id="cb27-10"><a href="#cb27-10" tabindex="-1"></a>    <span class="cf">assert</span> output[<span class="dv">0</span>] <span class="op">==</span> <span class="st">'4.0</span><span class="ch">\t</span><span class="st">1.0</span><span class="ch">\t</span><span class="st">0'</span></span>
-<span id="cb27-11"><a href="#cb27-11" tabindex="-1"></a>    <span class="cf">assert</span> output[<span class="dv">1</span>] <span class="op">==</span> <span class="st">'1.0</span><span class="ch">\t</span><span class="st">4.0</span><span class="ch">\t</span><span class="st">0'</span></span>
-<span id="cb27-12"><a href="#cb27-12" tabindex="-1"></a>    <span class="cf">assert</span> output[<span class="dv">2</span>] <span class="op">==</span> <span class="st">'0</span><span class="ch">\t</span><span class="st">0</span><span class="ch">\t</span><span class="st">1.0'</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1" aria-label="code-block-27-1"></a><span class="co"># test_overlap.py</span></span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1" aria-label="code-block-27-2"></a><span class="kw">def</span> test_end_to_end(simple_input):</span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1" aria-label="code-block-27-3"></a>    <span class="co"># initialize a StringIO with a string to read from</span></span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1" aria-label="code-block-27-4"></a>    infile <span class="op">=</span> simple_input</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1" aria-label="code-block-27-5"></a>    <span class="co"># this holds our output</span></span>
+<span id="cb27-6"><a href="#cb27-6" tabindex="-1" aria-label="code-block-27-6"></a>    outfile <span class="op">=</span> StringIO()</span>
+<span id="cb27-7"><a href="#cb27-7" tabindex="-1" aria-label="code-block-27-7"></a>    <span class="co"># call the function</span></span>
+<span id="cb27-8"><a href="#cb27-8" tabindex="-1" aria-label="code-block-27-8"></a>    overlap.main(infile, outfile)</span>
+<span id="cb27-9"><a href="#cb27-9" tabindex="-1" aria-label="code-block-27-9"></a>    output <span class="op">=</span> outfile.getvalue().split(<span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb27-10"><a href="#cb27-10" tabindex="-1" aria-label="code-block-27-10"></a>    <span class="cf">assert</span> output[<span class="dv">0</span>] <span class="op">==</span> <span class="st">'4.0</span><span class="ch">\t</span><span class="st">1.0</span><span class="ch">\t</span><span class="st">0'</span></span>
+<span id="cb27-11"><a href="#cb27-11" tabindex="-1" aria-label="code-block-27-11"></a>    <span class="cf">assert</span> output[<span class="dv">1</span>] <span class="op">==</span> <span class="st">'1.0</span><span class="ch">\t</span><span class="st">4.0</span><span class="ch">\t</span><span class="st">0'</span></span>
+<span id="cb27-12"><a href="#cb27-12" tabindex="-1" aria-label="code-block-27-12"></a>    <span class="cf">assert</span> output[<span class="dv">2</span>] <span class="op">==</span> <span class="st">'0</span><span class="ch">\t</span><span class="st">0</span><span class="ch">\t</span><span class="st">1.0'</span></span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1116,18 +1116,18 @@ elsewhere.</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a><span class="co"># overlap.py</span></span>
-<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a><span class="kw">def</span> main(infile, outfile):</span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>    rectangles <span class="op">=</span> read_rectangles(infile)</span>
-<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a></span>
-<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a>    <span class="cf">for</span> red_name, red_rect <span class="kw">in</span> rectangles.items():</span>
-<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a>        output_line <span class="op">=</span> []</span>
-<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a>        <span class="cf">for</span> blue_name, blue_rect <span class="kw">in</span> rectangles.items():</span>
-<span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a>            overlap <span class="op">=</span> red_rect.overlap(blue_rect)</span>
-<span id="cb28-9"><a href="#cb28-9" tabindex="-1"></a>            result <span class="op">=</span> <span class="bu">str</span>(overlap.area()) <span class="cf">if</span> overlap <span class="cf">else</span> <span class="st">'0'</span></span>
-<span id="cb28-10"><a href="#cb28-10" tabindex="-1"></a></span>
-<span id="cb28-11"><a href="#cb28-11" tabindex="-1"></a>            output_line.append(result)</span>
-<span id="cb28-12"><a href="#cb28-12" tabindex="-1"></a>        outfile.write(<span class="st">'</span><span class="ch">\t</span><span class="st">'</span>.join(output_line) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1" aria-label="code-block-28-1"></a><span class="co"># overlap.py</span></span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1" aria-label="code-block-28-2"></a><span class="kw">def</span> main(infile, outfile):</span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1" aria-label="code-block-28-3"></a>    rectangles <span class="op">=</span> read_rectangles(infile)</span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1" aria-label="code-block-28-4"></a></span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1" aria-label="code-block-28-5"></a>    <span class="cf">for</span> red_name, red_rect <span class="kw">in</span> rectangles.items():</span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1" aria-label="code-block-28-6"></a>        output_line <span class="op">=</span> []</span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1" aria-label="code-block-28-7"></a>        <span class="cf">for</span> blue_name, blue_rect <span class="kw">in</span> rectangles.items():</span>
+<span id="cb28-8"><a href="#cb28-8" tabindex="-1" aria-label="code-block-28-8"></a>            overlap <span class="op">=</span> red_rect.overlap(blue_rect)</span>
+<span id="cb28-9"><a href="#cb28-9" tabindex="-1" aria-label="code-block-28-9"></a>            result <span class="op">=</span> <span class="bu">str</span>(overlap.area()) <span class="cf">if</span> overlap <span class="cf">else</span> <span class="st">'0'</span></span>
+<span id="cb28-10"><a href="#cb28-10" tabindex="-1" aria-label="code-block-28-10"></a></span>
+<span id="cb28-11"><a href="#cb28-11" tabindex="-1" aria-label="code-block-28-11"></a>            output_line.append(result)</span>
+<span id="cb28-12"><a href="#cb28-12" tabindex="-1" aria-label="code-block-28-12"></a>        outfile.write(<span class="st">'</span><span class="ch">\t</span><span class="st">'</span>.join(output_line) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code></pre>
 </div>
 </div>
 <div class="section level3">
@@ -1232,7 +1232,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.0" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/e710c947c6d59097e1568794dd0a0041e5db067d" class="external-link">varnish (1.0.9)</a></p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/intersect-training/varnish/tree/e710c947c6d59097e1568794dd0a0041e5db067d" class="external-link">varnish (1.0.9)</a></p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1255,7 +1255,7 @@ any links that you are not going to use.
   "identifier": "https://INTERSECT-training.github.io/testing-lesson/big-changes.html",
   "dateCreated": "2025-09-17",
   "dateModified": "2025-07-17",
-  "datePublished": "2026-04-14"
+  "datePublished": "2026-04-21"
 }
 
   </script><script>
