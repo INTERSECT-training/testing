@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/01-introduction-to-tdd.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/01.5-why-we-test.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/02-parametrized-testing.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/03-property-based-testing.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/04-testing-and-design.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/05-mocking-and-isolation.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/06-refactoring-legacy-code.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/07-brittle-tests-and-bugs.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/08-llms-and-testing.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/09-summary-and-next-steps.html</loc>
+  </url>
+  <url>
     <loc>https://INTERSECT-training.github.io/testing-lesson/404.html</loc>
   </url>
   <url>
@@ -26,6 +56,36 @@
   </url>
   <url>
     <loc>https://INTERSECT-training.github.io/testing-lesson/index.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/01-introduction-to-tdd.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/01.5-why-we-test.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/02-parametrized-testing.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/03-property-based-testing.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/04-testing-and-design.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/05-mocking-and-isolation.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/06-refactoring-legacy-code.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/07-brittle-tests-and-bugs.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/08-llms-and-testing.html</loc>
+  </url>
+  <url>
+    <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/09-summary-and-next-steps.html</loc>
   </url>
   <url>
     <loc>https://INTERSECT-training.github.io/testing-lesson/instructor/404.html</loc>

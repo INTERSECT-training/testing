@@ -235,7 +235,7 @@
 <div class="accordion accordion-flush" id="accordionFlush2">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading2">
-        <a href="introduction.html">1. Introduction</a>
+        <a href="01-introduction-to-tdd.html">1. Introduction to Testing as a Design Tool</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -247,7 +247,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="legacy-codebase.html">2. Working with Legacy Code</a>
+        <a href="01.5-why-we-test.html">2. Why We Test: Verification and Validation</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -259,7 +259,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="test-framework-code-cov.html">3. Test framework</a>
+        <a href="02-parametrized-testing.html">3. Parameterized Testing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -271,7 +271,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="TDD.html">4. Test Driven Development</a>
+        <a href="03-property-based-testing.html">4. Property-Based Testing</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -283,7 +283,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="refactor-for-testing.html">5. Refactoring for Testing</a>
+        <a href="04-testing-and-design.html">5. Testing and Design</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -295,7 +295,55 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="big-changes.html">6. Testing Big Changes</a>
+        <a href="05-mocking-and-isolation.html">6. Mocking and Isolation</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush8">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading8">
+        <a href="06-refactoring-legacy-code.html">7. Refactoring Legacy Code</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="07-brittle-tests-and-bugs.html">8. Brittle Tests and Bugs</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush10">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading10">
+        <a href="08-llms-and-testing.html">9. Co-Authoring with LLMs: AI and TDD</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush11">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading11">
+        <a href="09-summary-and-next-steps.html">10. Summary and Next Steps</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -358,7 +406,16 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Key Points</h1>
         
-<section id="introduction"><h2 class="section-heading"><a href="introduction.html">IntroductionWhat is testing?<a class="anchor" aria-label="anchor" href="#what-is-testing"></a>Why (else) do we test?<a class="anchor" aria-label="anchor" href="#why-else-do-we-test"></a>When to <em>run</em> tests?<a class="anchor" aria-label="anchor" href="#when-to-run-tests"></a>When to <em>write</em> tests?<a class="anchor" aria-label="anchor" href="#when-to-write-tests"></a></a></h2>
+<section id="01-introduction-to-tdd"><h2 class="section-heading"><a href="01-introduction-to-tdd.html">Introduction to Testing as a Design Tool</a></h2>
+<hr class="half-width">
+<ul>
+<li>TDD cycles between the phases red, green, and refactor</li>
+<li>TDD cycles should be fast, run tests on every write</li>
+<li>Writing tests first ensures you <em>have</em> tests and that they
+are working</li>
+<li>Making code testable forces better style</li>
+<li>It is much faster to work with code under test</li>
+</ul></section><section id="01.5-why-we-test"><h2 class="section-heading"><a href="01.5-why-we-test.html">Why We Test: Verification and Validation</a></h2>
 <hr class="half-width">
 <ul>
 <li>Testing improves confidence about your code. It doesn’t prove that
@@ -370,16 +427,7 @@ should be an activity that goes hand-in-hand with code development.</li>
 <li>Tests are themselves code. Thus, test code should follow the same
 overarching design principles as functional code (e.g. DRY, modular,
 reusable, commented, etc).</li>
-</ul></section><section id="legacy-codebase"><h2 class="section-heading"><a href="legacy-codebase.html">Working with Legacy CodeMeet the legacy code project<a class="anchor" aria-label="anchor" href="#meet-the-legacy-code-project"></a>A simple end-to-end test<a class="anchor" aria-label="anchor" href="#a-simple-end-to-end-test"></a></a></h2>
-<hr class="half-width">
-<ul>
-<li>Legacy code is code without tests. It’s extremely challenging to
-change code that doesn’t have tests.</li>
-<li>At the very least you should have an end-to-end test when starting
-to change code.</li>
-<li>Try to add tests before making changes, work in small steps.</li>
-<li>Having tests pass doesn’t mean your code is correct.</li>
-</ul></section><section id="test-framework-code-cov"><h2 class="section-heading"><a href="test-framework-code-cov.html">Test frameworkpytest: A test framework<a class="anchor" aria-label="anchor" href="#pytest-a-test-framework"></a>What is code (test) coverage<a class="anchor" aria-label="anchor" href="#what-is-code-test-coverage"></a></a></h2>
+</ul></section><section id="02-parametrized-testing"><h2 class="section-heading"><a href="02-parametrized-testing.html">Parameterized Testing</a></h2>
 <hr class="half-width">
 <ul>
 <li>A test framework simplifies adding tests to your project.</li>
@@ -387,16 +435,17 @@ to change code.</li>
 fun.</li>
 <li>Coverage tools are useful to identify which parts of the code are
 executed with tests</li>
-</ul></section><section id="TDD"><h2 class="section-heading"><a href="TDD.html">Test Driven DevelopmentTest Driven Development<a class="anchor" aria-label="anchor" href="#test-driven-development"></a></a></h2>
+</ul></section><section id="03-property-based-testing"><h2 class="section-heading"><a href="03-property-based-testing.html">Property-Based Testing</a></h2>
 <hr class="half-width">
 <ul>
-<li>TDD cycles between the phases red, green, and refactor</li>
-<li>TDD cycles should be fast, run tests on every write</li>
-<li>Writing tests first ensures you <em>have</em> tests and that they
-are working</li>
-<li>Making code testable forces better style</li>
-<li>It is much faster to work with code under test</li>
-</ul></section><section id="refactor-for-testing"><h2 class="section-heading"><a href="refactor-for-testing.html">Refactoring for TestingMonolithic <code>main</code> functions<a class="anchor" aria-label="anchor" href="#monolithic-main-functions"></a>Safe Refactoring and TDD<a class="anchor" aria-label="anchor" href="#safe-refactoring-and-tdd"></a></a></h2>
+<li>PBT emphasizes writing conditions that test examples should
+satisfy</li>
+<li>Actual test cases are auto-generated.</li>
+<li>“Shrinking” zeroes in on the minimal examples that trigger
+failure.</li>
+</ul></section><section id="04-testing-and-design"><h2 class="section-heading"><a href="04-testing-and-design.html">Testing and Design</a></h2>
+<hr class="half-width"></section><section id="05-mocking-and-isolation"><h2 class="section-heading"><a href="05-mocking-and-isolation.html">Mocking and Isolation</a></h2>
+<hr class="half-width"></section><section id="06-refactoring-legacy-code"><h2 class="section-heading"><a href="06-refactoring-legacy-code.html">Refactoring Legacy Code</a></h2>
 <hr class="half-width">
 <ul>
 <li>Testing long methods is difficult since you can’t pinpoint a few
@@ -406,15 +455,19 @@ lines of logic.</li>
 carefully making only the simplest changes first.</li>
 <li>Write tests with an adversarial viewpoint.</li>
 <li>Keep tests DRY, fixtures and parameter can help.</li>
-</ul></section><section id="big-changes"><h2 class="section-heading"><a href="big-changes.html">Testing Big ChangesMaking big changes<a class="anchor" aria-label="anchor" href="#making-big-changes"></a></a></h2>
+</ul></section><section id="07-brittle-tests-and-bugs"><h2 class="section-heading"><a href="07-brittle-tests-and-bugs.html">Brittle Tests and Bugs</a></h2>
 <hr class="half-width">
 <ul>
 <li>Changing a lot of test code for minor features can indicate your
 tests are not DRY and heavily coupled.</li>
+<li>Do NOT invent a Swiss-army knife! TDD helps keep you focused on
+iterative, essential development.</li>
 <li>Testing a module’s interface focuses tests on what a user would
 typically observe. You don’t have to change as many tests when internal
 change.</li>
-</ul></section>
+</ul></section><section id="08-llms-and-testing"><h2 class="section-heading"><a href="08-llms-and-testing.html">Co-Authoring with LLMs: AI and TDD</a></h2>
+<hr class="half-width"></section><section id="09-summary-and-next-steps"><h2 class="section-heading"><a href="09-summary-and-next-steps.html">Summary and Next Steps</a></h2>
+<hr class="half-width"></section>
 </div>
     </main>
 </div>

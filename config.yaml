@@ -65,13 +65,26 @@ contact: 'icosden@princeton.edu' # FIXME
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
-- introduction.md
-- legacy-codebase.md
-- test-framework-code-cov.md
-- TDD.md
-- refactor-for-testing.md
-- big-changes.md
+episodes:
+  - 01-introduction-to-tdd.md
+  - 01.5-why-we-test.md
+  - 02-parametrized-testing.md
+  - 03-property-based-testing.md
+  - 04-testing-and-design.md
+  - 05-mocking-and-isolation.md
+  - 06-refactoring-legacy-code.md
+  - 07-brittle-tests-and-bugs.md
+  - 08-llms-and-testing.md
+  - 09-summary-and-next-steps.md
+
+# Order of episodes in your lesson
+# episodes: 
+# - introduction.md
+# - legacy-codebase.md
+# - test-framework-code-cov.md
+# - TDD.md
+# - refactor-for-testing.md
+# - big-changes.md
 
 # Information for Learners
 learners: 
