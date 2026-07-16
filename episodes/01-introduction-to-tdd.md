@@ -135,7 +135,8 @@ By writing the tests first, you forced yourself to become the *user* of your own
 
 What we just did is the first step of **Test-Driven Development (TDD)**. TDD is a highly disciplined software workflow built on a tight, repeating three-step loop:
 
-![TDD Cycle](../fig/tdd-cycle.png)
+![Red-Green-Refactor cycle, liberally borrowed from a blog at https://khalilstemmler.com/](fig/red-green-refactor.png){alt="Cycle with three nodes: 'Red (write a failing test)', followed by 'Green (write just enough code to pass the test)', followed by 'Refactor (improve the code with tests intact)', then back to Red"}
+
 
 1. **RED:** Write a test for a behavior you want, run it, and watch it fail.
 2. **GREEN:** Write the absolute simplest, dirtiest code possible to make the test pass.
