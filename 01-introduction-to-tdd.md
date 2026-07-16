@@ -87,7 +87,9 @@ To write these tests, we need to establish a few basic rules and folder structur
 * **The Test File:** Create a file in that folder named `test_overlap.py`.
 * **The Naming Convention:** Pytest (our test runner) is picky. It will only look for tests if the file name starts with `test_` and the test functions themselves start with `test_`.
 
-::: challenge ## Exercise: Write the Tests (5 mins)
+::: challenge
+
+## Exercise: Write the Tests (5 mins)
 
 Open your editor, navigate to your `testing2026` folder, and write at least **three different test cases** inside `test_overlap.py`. 
 
