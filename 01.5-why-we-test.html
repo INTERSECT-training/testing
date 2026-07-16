@@ -446,14 +446,17 @@ collisions accurately? * Does our thermodynamic simulation accurately
 predict the physical state of the gas?</p>
 <p>This is solved by scientific experimentation, field data, and peer
 review.</p>
-<p>::: warning ## The Crucial Takeaway A code can be perfectly verified
-while being completely invalid. Your tests can all be beautifully green,
-but if your underlying physical equations are wrong, your science is
-still wrong. However, you cannot validate an unverified model. If your
-code has silent indexing bugs, your physical simulations are meaningless
-noise. Verification is the prerequisite for validation. :::</p>
-<hr></div>
-</section><section><h2 class="section-heading" id="case-study-the-supercooled-water-war">Case Study: The “Supercooled Water War”<a class="anchor" aria-label="anchor" href="#case-study-the-supercooled-water-war"></a></h2>
+</div>
+</section><div class="section level2 warning">
+<h2 id="the-crucial-takeaway">The Crucial Takeaway<a class="anchor" aria-label="anchor" href="#the-crucial-takeaway"></a></h2>
+<p>A code can be perfectly verified while being completely invalid. Your
+tests can all be beautifully green, but if your underlying physical
+equations are wrong, your science is still wrong. However, you cannot
+validate an unverified model. If your code has silent indexing bugs,
+your physical simulations are meaningless noise. Verification is the
+prerequisite for validation.</p>
+</div>
+<hr><section><h2 class="section-heading" id="case-study-the-supercooled-water-war">Case Study: The “Supercooled Water War”<a class="anchor" aria-label="anchor" href="#case-study-the-supercooled-water-war"></a></h2>
 <hr class="half-width"><p>To see the real-world cost of skipped verification, we only have to
 look at one of the most famous computer simulation controversies in
 modern chemistry: the “Supercooled Water War.”</p>
@@ -497,7 +500,15 @@ run pytest, and move on.</li>
 peers see it.</li>
 <li>Caught post-publication (Months/Years): Disastrous. Retracted
 papers, corrupt public datasets, and lost credibility.</li>
-</ul><hr><p>::: challenge ## Discussion: Your Scientific Baseline (5 mins)</p>
+</ul><hr><div id="discussion-your-scientific-baseline-5-mins" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="discussion-your-scientific-baseline-5-mins" class="callout-inner">
+<h3 class="callout-title">Discussion: Your Scientific Baseline (5
+mins)</h3>
+<div class="callout-content">
 <p>Think about a computational tool, script, or model you currently use
 in your daily research.</p>
 <ol style="list-style-type: decimal"><li>How do you currently check that this code is verified (doing what
@@ -505,8 +516,11 @@ you expect)?</li>
 <li>What is the most terrifying silent bug that could exist in that
 codebase right now without you knowing?</li>
 <li>How would you design a simple automated test to catch that specific
-bug? :::</li>
-</ol><div id="keypoints1" class="callout keypoints">
+bug?</li>
+</ol></div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>

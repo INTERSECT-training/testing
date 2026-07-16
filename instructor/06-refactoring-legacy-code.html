@@ -457,14 +457,24 @@ reference file.</p>
 <span id="cb1-28"><a href="#cb1-28" tabindex="-1" aria-label="code-block-1-28"></a>    <span class="cf">with</span> <span class="bu">open</span>(output_file, <span class="st">"r"</span>) <span class="im">as</span> f_out, <span class="bu">open</span>(reference_file, <span class="st">"r"</span>) <span class="im">as</span> f_ref:</span>
 <span id="cb1-29"><a href="#cb1-29" tabindex="-1" aria-label="code-block-1-29"></a>        <span class="cf">assert</span> f_out.read() <span class="op">==</span> f_ref.read()</span></code></pre>
 </div>
-<p>::: challenge ## Exercise: Run the Integration Test</p>
+<div id="exercise-run-the-integration-test" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-run-the-integration-test" class="callout-inner">
+<h3 class="callout-title">Exercise: Run the Integration Test</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal"><li>Create a dummy legacy script structure or use the provided legacy
 code in your environment.</li>
 <li>Run <code>pytest test_legacy.py</code>.</li>
 <li>Verify that your high-level integration test passes (turns
 green).</li>
 </ol><p>This is now your permanent safety net. If you break <em>anything</em>
-during the refactoring process, this test will catch it. :::</p>
+during the refactoring process, this test will catch it.</p>
+</div>
+</div>
+</div>
 <hr></div>
 </section><section><h2 class="section-heading" id="step-2-systematically-dismantle-the-monolith">Step 2: Systematically Dismantle the Monolith<a class="anchor" aria-label="anchor" href="#step-2-systematically-dismantle-the-monolith"></a></h2>
 <hr class="half-width"><p>With our safety net in place, we can begin extracting modules from

@@ -449,13 +449,16 @@ generators.</p>
 <p>If you find yourself mocking your own helper functions, mathematical
 subroutines, or internal class structures, you are likely using mocks to
 mask bad software design.</p>
-<p>::: warning ## Code Smell: “Over-Mocking” If you have to mock out 5
-layers of your own internal code just to write a unit test for a single
-function, <strong>your codebase is tightly coupled</strong>.</p>
+</div>
+</section><div class="section level2 warning">
+<h2 id="code-smell-over-mocking">Code Smell: “Over-Mocking”<a class="anchor" aria-label="anchor" href="#code-smell-over-mocking"></a></h2>
+<p>If you have to mock out 5 layers of your own internal code just to
+write a unit test for a single function, <strong>your codebase is
+tightly coupled</strong>.</p>
 <p>Your test is now directly bound to the internal implementation
 details of your code. The moment you change a variable name, split a
 function, or optimize your logic, all your tests will break—even if the
-overall calculation is still correct. :::</p>
+overall calculation is still correct.</p>
 </div>
 <div class="section level3">
 <h3 id="the-solution-decouple-side-effects-from-logic">The Solution: Decouple Side Effects from Logic<a class="anchor" aria-label="anchor" href="#the-solution-decouple-side-effects-from-logic"></a></h3>
@@ -468,19 +471,25 @@ database, makes the API call) and returns raw data.</li>
 raw data and does the calculations.</li>
 <li>Write clean, mock-free unit tests for your calculation logic. Test
 the I/O function sparingly using a dedicated integration test.</li>
-</ol><p>::: rationale ## Discussion Look at a recent script or program you
-wrote for your research.</p>
+</ol></div>
+<div class="section level2 rationale">
+<h2 id="discussion">Discussion<a class="anchor" aria-label="anchor" href="#discussion"></a></h2>
+<p>Look at a recent script or program you wrote for your research.</p>
 <ul><li>Where does it read files, query databases, or call external
 libraries?</li>
 <li>Are those actions mixed in directly with your calculations, or are
 they isolated?</li>
 <li>If you wanted to test your core algorithm, how much of your own
-script would you have to mock out? :::</li>
-</ul><!--
+script would you have to mock out?</li>
+</ul></div>
+<!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- --></div>
-</section></div> <!-- / div.lesson-content -->
+ -->
+
+
+
+      </div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/04-testing-and-design.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/06-refactoring-legacy-code.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

@@ -459,7 +459,15 @@ comprehensible. How do we represent a rectangle? What are the inputs?
 What does the function return?</p>
 <p>Before we write a single line of code, we need to clear up the
 ambiguity.</p>
-<p>::: challenge ## Pre-Task: The 3-Minute Q&amp;A Prep (5 mins)</p>
+<div id="pre-task-the-3-minute-qa-prep-5-mins" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="pre-task-the-3-minute-qa-prep-5-mins" class="callout-inner">
+<h3 class="callout-title">Pre-Task: The 3-Minute Q&amp;A Prep (5
+mins)</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Get into groups of 2 or 3.</li>
 <li>Take <strong>5 minutes</strong> to look at this prompt and figure
@@ -467,8 +475,11 @@ out what questions you need to ask me (the instructor) to actually build
 this. What details are missing?</li>
 <li>We will then hold a <strong>3-minute rapid-fire Q&amp;A</strong>
 where you can ask me absolutely anything you want to pin down the
-requirements. :::</li>
+requirements.</li>
 </ol>
+</div>
+</div>
+</div>
 <p><em>(Go ahead and run the 3-minute Q&amp;A now with your
 instructor!)</em></p>
 <hr></section><section><h2 class="section-heading" id="the-curveball">The Curveball<a class="anchor" aria-label="anchor" href="#the-curveball"></a>
@@ -623,7 +634,14 @@ and improve the design while keeping the tests green.</li>
 <hr class="half-width">
 <p>Now that you have your failing tests (Red) and you have locked down
 your design decisions, it is finally time to write the actual math.</p>
-<p>::: challenge ## Exercise: Get to Green (10 mins)</p>
+<div id="exercise-get-to-green-10-mins" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-get-to-green-10-mins" class="callout-inner">
+<h3 class="callout-title">Exercise: Get to Green (10 mins)</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Create a new file named <code>overlap.py</code> in your
 <code>testing2026</code> folder.</li>
@@ -632,8 +650,11 @@ structure you decided on in your <code>test_overlap.py</code> file.</li>
 <li>Implement the logic to detect whether the rectangles overlap.</li>
 <li>Run <code>pytest</code> in your terminal.</li>
 <li>If it fails, tweak your math inside <code>overlap.py</code> until
-the terminal turns beautiful, satisfying green. :::</li>
+the terminal turns beautiful, satisfying green.</li>
 </ol>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -752,15 +773,19 @@ collisions accurately? * Does our thermodynamic simulation accurately
 predict the physical state of the gas?</p>
 <p>This is solved by scientific experimentation, field data, and peer
 review.</p>
-<p>::: warning ## The Crucial Takeaway A code can be perfectly verified
-while being completely invalid. Your tests can all be beautifully green,
-but if your underlying physical equations are wrong, your science is
-still wrong. However, you cannot validate an unverified model. If your
-code has silent indexing bugs, your physical simulations are meaningless
-noise. Verification is the prerequisite for validation. :::</p>
-<hr>
 </div>
-</section><section><h2 class="section-heading" id="case-study-the-supercooled-water-war">Case Study: The “Supercooled Water War”<a class="anchor" aria-label="anchor" href="#case-study-the-supercooled-water-war"></a>
+</section><div class="section level2 warning">
+<h2 id="the-crucial-takeaway">The Crucial Takeaway<a class="anchor" aria-label="anchor" href="#the-crucial-takeaway"></a>
+</h2>
+<p>A code can be perfectly verified while being completely invalid. Your
+tests can all be beautifully green, but if your underlying physical
+equations are wrong, your science is still wrong. However, you cannot
+validate an unverified model. If your code has silent indexing bugs,
+your physical simulations are meaningless noise. Verification is the
+prerequisite for validation.</p>
+</div>
+<hr>
+<section><h2 class="section-heading" id="case-study-the-supercooled-water-war">Case Study: The “Supercooled Water War”<a class="anchor" aria-label="anchor" href="#case-study-the-supercooled-water-war"></a>
 </h2>
 <hr class="half-width">
 <p>To see the real-world cost of skipped verification, we only have to
@@ -813,7 +838,15 @@ peers see it.</li>
 papers, corrupt public datasets, and lost credibility.</li>
 </ul>
 <hr>
-<p>::: challenge ## Discussion: Your Scientific Baseline (5 mins)</p>
+<div id="discussion-your-scientific-baseline-5-mins" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="discussion-your-scientific-baseline-5-mins" class="callout-inner">
+<h3 class="callout-title">Discussion: Your Scientific Baseline (5
+mins)</h3>
+<div class="callout-content">
 <p>Think about a computational tool, script, or model you currently use
 in your daily research.</p>
 <ol style="list-style-type: decimal">
@@ -822,8 +855,11 @@ you expect)?</li>
 <li>What is the most terrifying silent bug that could exist in that
 codebase right now without you knowing?</li>
 <li>How would you design a simple automated test to catch that specific
-bug? :::</li>
+bug?</li>
 </ol>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -966,8 +1002,15 @@ it treats each item in the list as an entirely separate test case. If
 the second case fails, the first one still passes!</li>
 </ol>
 <hr>
-<p>::: challenge ## Exercise: Parameterize Your Overlap Tests (10
-mins)</p>
+<div id="exercise-parameterize-your-overlap-tests-10-mins" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-parameterize-your-overlap-tests-10-mins" class="callout-inner">
+<h3 class="callout-title">Exercise: Parameterize Your Overlap Tests (10
+mins)</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Open <code>test_overlap.py</code>.</li>
 <li>Refactor your individual test functions into a single, clean
@@ -978,9 +1021,18 @@ parametrization list (including at least one edge case, like completely
 identical rectangles or one rectangle entirely inside another).</li>
 <li>Run <code>pytest -v</code> (the <code>-v</code> flag stands for
 “verbose”) in your terminal. Observe how pytest dynamically generates
-names for each of your parameterized runs! :::</li>
+names for each of your parameterized runs!</li>
 </ol>
-<p>::: solution ## Solution</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
 <p>Here is a clean, robust way to parameterize your overlap tests using
 coordinate tuples:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -1013,7 +1065,10 @@ will look like this, showing each run as its own independent check:</p>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="ex">test_overlap.py::test_overlap_scenarios[rect_a3-rect_b3-True]</span> PASSED</span>
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="ex">test_overlap.py::test_overlap_scenarios[rect_a4-rect_b4-False]</span> PASSED</span></code></pre>
 </div>
-<p>:::</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1133,7 +1188,14 @@ physically valid, we must ensure that <span class="math inline">\(xmin
 ymax\)</span>.</p>
 <p>We can define this generation rule using a custom strategy in
 Hypothesis with the <code>@st.composite</code> decorator.</p>
-<p>::: challenge ## Terminology: “Drawing” in Hypothesis</p>
+<div id="terminology-drawing-in-hypothesis" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="terminology-drawing-in-hypothesis" class="callout-inner">
+<h3 class="callout-title">Terminology: “Drawing” in Hypothesis</h3>
+<div class="callout-content">
 <p>In the strategy code below, you will see a parameter called
 <code>draw</code>.</p>
 <ul>
@@ -1145,8 +1207,12 @@ shape,” rendering a line, or sketching a picture on your screen.</li>
 <strong>“drawing a card from a deck of possibilities.”</strong> You are
 telling the testing engine: <em>“Draw a random integer from the deck of
 integers between -100 and 100, and hand it to me so I can construct my
-coordinates.”</em> :::</li>
+coordinates.”</em>
+</li>
 </ul>
+</div>
+</div>
+</div>
 <p>Create a new test file named <code>test_properties.py</code>:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1197,7 +1263,14 @@ inputs. This process is called <strong>shrinking</strong>.</p>
 printing the absolute simplest, most minimal set of numbers that causes
 your test to fail (often involving simple coordinates like
 <code>0</code>, <code>1</code>, or identical overlapping edges).</p>
-<p>::: challenge ## Exercise: Unleash the Fuzzer</p>
+<div id="exercise-unleash-the-fuzzer" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-unleash-the-fuzzer" class="callout-inner">
+<h3 class="callout-title">Exercise: Unleash the Fuzzer</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Create the <code>test_properties.py</code> file shown above.</li>
 <li>Run <code>pytest test_properties.py</code> to see if your
@@ -1212,8 +1285,11 @@ comparisons (for example, change a <code>&lt;</code> to a
 terminal output. Notice how Hypothesis identifies the failure and prints
 the exact “Falsifying example” coordinates.</li>
 <li>Revert your code back to its passing state once you have observed
-the shrinking behavior. :::</li>
+the shrinking behavior.</li>
 </ol>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1533,13 +1609,17 @@ generators.</p>
 <p>If you find yourself mocking your own helper functions, mathematical
 subroutines, or internal class structures, you are likely using mocks to
 mask bad software design.</p>
-<p>::: warning ## Code Smell: “Over-Mocking” If you have to mock out 5
-layers of your own internal code just to write a unit test for a single
-function, <strong>your codebase is tightly coupled</strong>.</p>
+</div>
+</section><div class="section level2 warning">
+<h2 id="code-smell-over-mocking">Code Smell: “Over-Mocking”<a class="anchor" aria-label="anchor" href="#code-smell-over-mocking"></a>
+</h2>
+<p>If you have to mock out 5 layers of your own internal code just to
+write a unit test for a single function, <strong>your codebase is
+tightly coupled</strong>.</p>
 <p>Your test is now directly bound to the internal implementation
 details of your code. The moment you change a variable name, split a
 function, or optimize your logic, all your tests will break—even if the
-overall calculation is still correct. :::</p>
+overall calculation is still correct.</p>
 </div>
 <div class="section level3">
 <h3 id="the-solution-decouple-side-effects-from-logic">The Solution: Decouple Side Effects from Logic<a class="anchor" aria-label="anchor" href="#the-solution-decouple-side-effects-from-logic"></a>
@@ -1555,22 +1635,20 @@ raw data and does the calculations.</li>
 <li>Write clean, mock-free unit tests for your calculation logic. Test
 the I/O function sparingly using a dedicated integration test.</li>
 </ol>
-<p>::: rationale ## Discussion Look at a recent script or program you
-wrote for your research.</p>
+</div>
+<div class="section level2 rationale">
+<h2 id="discussion">Discussion<a class="anchor" aria-label="anchor" href="#discussion"></a>
+</h2>
+<p>Look at a recent script or program you wrote for your research.</p>
 <ul>
 <li>Where does it read files, query databases, or call external
 libraries?</li>
 <li>Are those actions mixed in directly with your calculations, or are
 they isolated?</li>
 <li>If you wanted to test your core algorithm, how much of your own
-script would you have to mock out? :::</li>
+script would you have to mock out?</li>
 </ul>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- -->
-</div>
-</section></section><section id="aio-06-refactoring-legacy-code"><p>Content from <a href="06-refactoring-legacy-code.html">Refactoring Legacy Code</a></p>
+</div></section><section id="aio-06-refactoring-legacy-code"><p>Content from <a href="06-refactoring-legacy-code.html">Refactoring Legacy Code</a></p>
 <hr>
 <p>Last updated on 2026-07-16 |
 
@@ -1674,7 +1752,14 @@ reference file.</p>
 <span id="cb1-28"><a href="#cb1-28" tabindex="-1" aria-label="code-block-1-28"></a>    <span class="cf">with</span> <span class="bu">open</span>(output_file, <span class="st">"r"</span>) <span class="im">as</span> f_out, <span class="bu">open</span>(reference_file, <span class="st">"r"</span>) <span class="im">as</span> f_ref:</span>
 <span id="cb1-29"><a href="#cb1-29" tabindex="-1" aria-label="code-block-1-29"></a>        <span class="cf">assert</span> f_out.read() <span class="op">==</span> f_ref.read()</span></code></pre>
 </div>
-<p>::: challenge ## Exercise: Run the Integration Test</p>
+<div id="exercise-run-the-integration-test" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-run-the-integration-test" class="callout-inner">
+<h3 class="callout-title">Exercise: Run the Integration Test</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal">
 <li>Create a dummy legacy script structure or use the provided legacy
 code in your environment.</li>
@@ -1683,7 +1768,10 @@ code in your environment.</li>
 green).</li>
 </ol>
 <p>This is now your permanent safety net. If you break <em>anything</em>
-during the refactoring process, this test will catch it. :::</p>
+during the refactoring process, this test will catch it.</p>
+</div>
+</div>
+</div>
 <hr>
 </div>
 </section><section><h2 class="section-heading" id="step-2-systematically-dismantle-the-monolith">Step 2: Systematically Dismantle the Monolith<a class="anchor" aria-label="anchor" href="#step-2-systematically-dismantle-the-monolith"></a>
@@ -1915,16 +2003,19 @@ binary matrix, the brittle tests will completely break and require a
 massive rewrite. The robust tests, however, will allow us to completely
 swap out the internal formulas or data structures while remaining
 green.</p>
-<p>::: rationale ## The Design Rule Always design your tests to assert
-against the <strong>public interface</strong> of your modules (the
-inputs and expected outputs) rather than the internal, private helper
-mechanisms.</p>
+</div>
+</section><div class="section level2 rationale">
+<h2 id="the-design-rule">The Design Rule<a class="anchor" aria-label="anchor" href="#the-design-rule"></a>
+</h2>
+<p>Always design your tests to assert against the <strong>public
+interface</strong> of your modules (the inputs and expected outputs)
+rather than the internal, private helper mechanisms.</p>
 <p>Testing boundaries allows you to completely refactor your math,
 change internal library dependencies, or optimize execution speeds
-without having to constantly rewrite your test suite. :::</p>
-<hr>
+without having to constantly rewrite your test suite.</p>
 </div>
-</section><section><h2 class="section-heading" id="preventing-feature-creep">Preventing Feature Creep<a class="anchor" aria-label="anchor" href="#preventing-feature-creep"></a>
+<hr>
+<section><h2 class="section-heading" id="preventing-feature-creep">Preventing Feature Creep<a class="anchor" aria-label="anchor" href="#preventing-feature-creep"></a>
 </h2>
 <hr class="half-width">
 <p>Why didn’t we design our overlap detector to handle 3D spheres, 1D
@@ -2074,20 +2165,18 @@ them turn green.</li>
 <li>
 <strong>You refactor:</strong> Clean up the code structure yourself,
 running the tests at every step to keep the loop tight and safe.</li>
-</ol>
-<p>::: rationale ## Discussion Think about your current relationship
-with AI coding assistants.</p>
+</ol></section><div class="section level2 rationale">
+<h2 id="discussion-think-about-your-current-relationship-with-ai-coding">Discussion Think about your current relationship with AI coding<a class="anchor" aria-label="anchor" href="#discussion-think-about-your-current-relationship-with-ai-coding"></a>
+</h2>
+<p>assistants.</p>
 <ul>
 <li>Do you find yourself using them primarily to write functional code
 first, or do you use them to help you design and brainstorm edge
 cases?</li>
 <li>How can you shift your prompts tomorrow to make the LLM a better TDD
-collaborator? :::</li>
+collaborator?</li>
 </ul>
-<!--
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use.
- --></section></section><section id="aio-09-summary-and-next-steps"><p>Content from <a href="09-summary-and-next-steps.html">Summary and Next Steps</a></p>
+</div></section><section id="aio-09-summary-and-next-steps"><p>Content from <a href="09-summary-and-next-steps.html">Summary and Next Steps</a></p>
 <hr>
 <p>Last updated on 2026-07-16 |
 

@@ -443,7 +443,14 @@ physically valid, we must ensure that <span class="math inline">\(xmin
 ymax\)</span>.</p>
 <p>We can define this generation rule using a custom strategy in
 Hypothesis with the <code>@st.composite</code> decorator.</p>
-<p>::: challenge ## Terminology: “Drawing” in Hypothesis</p>
+<div id="terminology-drawing-in-hypothesis" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="terminology-drawing-in-hypothesis" class="callout-inner">
+<h3 class="callout-title">Terminology: “Drawing” in Hypothesis</h3>
+<div class="callout-content">
 <p>In the strategy code below, you will see a parameter called
 <code>draw</code>.</p>
 <ul><li>
@@ -454,8 +461,12 @@ shape,” rendering a line, or sketching a picture on your screen.</li>
 <strong>“drawing a card from a deck of possibilities.”</strong> You are
 telling the testing engine: <em>“Draw a random integer from the deck of
 integers between -100 and 100, and hand it to me so I can construct my
-coordinates.”</em> :::</li>
-</ul><p>Create a new test file named <code>test_properties.py</code>:</p>
+coordinates.”</em>
+</li>
+</ul></div>
+</div>
+</div>
+<p>Create a new test file named <code>test_properties.py</code>:</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -503,7 +514,14 @@ inputs. This process is called <strong>shrinking</strong>.</p>
 printing the absolute simplest, most minimal set of numbers that causes
 your test to fail (often involving simple coordinates like
 <code>0</code>, <code>1</code>, or identical overlapping edges).</p>
-<p>::: challenge ## Exercise: Unleash the Fuzzer</p>
+<div id="exercise-unleash-the-fuzzer" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-unleash-the-fuzzer" class="callout-inner">
+<h3 class="callout-title">Exercise: Unleash the Fuzzer</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal"><li>Create the <code>test_properties.py</code> file shown above.</li>
 <li>Run <code>pytest test_properties.py</code> to see if your
 <code>overlap.py</code> implementation satisfies these mathematical
@@ -517,8 +535,11 @@ comparisons (for example, change a <code>&lt;</code> to a
 terminal output. Notice how Hypothesis identifies the failure and prints
 the exact “Falsifying example” coordinates.</li>
 <li>Revert your code back to its passing state once you have observed
-the shrinking behavior. :::</li>
-</ol><div id="keypoints1" class="callout keypoints">
+the shrinking behavior.</li>
+</ol></div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>

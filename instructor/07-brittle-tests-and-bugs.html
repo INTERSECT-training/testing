@@ -472,15 +472,17 @@ binary matrix, the brittle tests will completely break and require a
 massive rewrite. The robust tests, however, will allow us to completely
 swap out the internal formulas or data structures while remaining
 green.</p>
-<p>::: rationale ## The Design Rule Always design your tests to assert
-against the <strong>public interface</strong> of your modules (the
-inputs and expected outputs) rather than the internal, private helper
-mechanisms.</p>
+</div>
+</section><div class="section level2 rationale">
+<h2 id="the-design-rule">The Design Rule<a class="anchor" aria-label="anchor" href="#the-design-rule"></a></h2>
+<p>Always design your tests to assert against the <strong>public
+interface</strong> of your modules (the inputs and expected outputs)
+rather than the internal, private helper mechanisms.</p>
 <p>Testing boundaries allows you to completely refactor your math,
 change internal library dependencies, or optimize execution speeds
-without having to constantly rewrite your test suite. :::</p>
-<hr></div>
-</section><section><h2 class="section-heading" id="preventing-feature-creep">Preventing Feature Creep<a class="anchor" aria-label="anchor" href="#preventing-feature-creep"></a></h2>
+without having to constantly rewrite your test suite.</p>
+</div>
+<hr><section><h2 class="section-heading" id="preventing-feature-creep">Preventing Feature Creep<a class="anchor" aria-label="anchor" href="#preventing-feature-creep"></a></h2>
 <hr class="half-width"><p>Why didn’t we design our overlap detector to handle 3D spheres, 1D
 lines, or rotated polygons right from the beginning?</p>
 <p>Test-Driven Development acts as a powerful psychological shield

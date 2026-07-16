@@ -462,8 +462,15 @@ the test.</li>
 <strong>The Test Runner:</strong> When you run <code>pytest</code>,
 it treats each item in the list as an entirely separate test case. If
 the second case fails, the first one still passes!</li>
-</ol><hr><p>::: challenge ## Exercise: Parameterize Your Overlap Tests (10
-mins)</p>
+</ol><hr><div id="exercise-parameterize-your-overlap-tests-10-mins" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="exercise-parameterize-your-overlap-tests-10-mins" class="callout-inner">
+<h3 class="callout-title">Exercise: Parameterize Your Overlap Tests (10
+mins)</h3>
+<div class="callout-content">
 <ol style="list-style-type: decimal"><li>Open <code>test_overlap.py</code>.</li>
 <li>Refactor your individual test functions into a single, clean
 parameterized test function called
@@ -473,8 +480,17 @@ parametrization list (including at least one edge case, like completely
 identical rectangles or one rectangle entirely inside another).</li>
 <li>Run <code>pytest -v</code> (the <code>-v</code> flag stands for
 “verbose”) in your terminal. Observe how pytest dynamically generates
-names for each of your parameterized runs! :::</li>
-</ol><p>::: solution ## Solution</p>
+names for each of your parameterized runs!</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
 <p>Here is a clean, robust way to parameterize your overlap tests using
 coordinate tuples:</p>
 <div class="codewrapper sourceCode" id="cb3">
@@ -507,7 +523,10 @@ will look like this, showing each run as its own independent check:</p>
 <span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a><span class="ex">test_overlap.py::test_overlap_scenarios[rect_a3-rect_b3-True]</span> PASSED</span>
 <span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a><span class="ex">test_overlap.py::test_overlap_scenarios[rect_a4-rect_b4-False]</span> PASSED</span></code></pre>
 </div>
-<p>:::</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
