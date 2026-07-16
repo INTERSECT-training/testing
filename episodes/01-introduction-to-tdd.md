@@ -33,7 +33,9 @@ If you are thinking, *"Wait, that's incredibly vague,"* you are exactly right. I
 
 Before we write a single line of code, we need to clear up the ambiguity.
 
-::: challenge ## Pre-Task: The 3-Minute Q&A Prep (5 mins)
+::: challenge
+
+## Pre-Task: The 3-Minute Q&A Prep (5 mins)
 
 1. Get into groups of 2 or 3.
 2. Take **5 minutes** to look at this prompt and figure out what questions you need to ask me (the instructor) to actually build this. What details are missing?
@@ -148,7 +150,9 @@ What we just did is the first step of **Test-Driven Development (TDD)**. TDD is 
 
 Now that you have your failing tests (Red) and you have locked down your design decisions, it is finally time to write the actual math.
 
-::: challenge ## Exercise: Get to Green (10 mins)
+::: challenge
+
+## Exercise: Get to Green (10 mins)
 
 1. Create a new file named `overlap.py` in your `testing2026` folder.
 2. Define the overlap function using the exact name and coordinate structure you decided on in your `test_overlap.py` file.

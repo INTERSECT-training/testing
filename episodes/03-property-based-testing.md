@@ -55,7 +55,9 @@ To write these tests, we need to tell Hypothesis how to generate valid rectangle
 
 We can define this generation rule using a custom strategy in Hypothesis with the `@st.composite` decorator.
 
-::: challenge ## Terminology: "Drawing" in Hypothesis
+::: challenge
+
+## Terminology: "Drawing" in Hypothesis
 
 In the strategy code below, you will see a parameter called `draw`. 
 
@@ -110,7 +112,9 @@ If there is a flaw in your overlap math, Hypothesis will not just report a failu
 
 If Hypothesis breaks your code with coordinates like `(12, -87, 43, 99)`, it will try smaller values, eventually printing the absolute simplest, most minimal set of numbers that causes your test to fail (often involving simple coordinates like `0`, `1`, or identical overlapping edges).
 
-::: challenge ## Exercise: Unleash the Fuzzer
+::: challenge
+
+## Exercise: Unleash the Fuzzer
 
 1. Create the `test_properties.py` file shown above.
 2. Run `pytest test_properties.py` to see if your `overlap.py` implementation satisfies these mathematical properties over 100 randomly generated scenarios.

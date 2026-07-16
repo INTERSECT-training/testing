@@ -71,7 +71,9 @@ def test_legacy_integration():
         assert f_out.read() == f_ref.read()
 ```
 
-::: challenge ## Exercise: Run the Integration Test
+::: challenge
+
+## Exercise: Run the Integration Test
 
 1. Create a dummy legacy script structure or use the provided legacy code in your environment.
 2. Run `pytest test_legacy.py`. 

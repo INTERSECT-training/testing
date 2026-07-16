@@ -75,7 +75,9 @@ Suppose our legacy pipeline from Episode 6 outputs a matrix file of 1s and 0s.
 
 If our requirements change tomorrow, and we decide we want to output a text report containing the actual overlap percentage area instead of a binary matrix, the brittle tests will completely break and require a massive rewrite. The robust tests, however, will allow us to completely swap out the internal formulas or data structures while remaining green.
 
-::: rationale ## The Design Rule
+::: rationale
+
+## The Design Rule
 Always design your tests to assert against the **public interface** of your modules (the inputs and expected outputs) rather than the internal, private helper mechanisms. 
 
 Testing boundaries allows you to completely refactor your math, change internal library dependencies, or optimize execution speeds without having to constantly rewrite your test suite.

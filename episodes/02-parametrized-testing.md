@@ -76,7 +76,9 @@ def test_overlap_scenarios(rect_a, rect_b, expected):
 
 ---
 
-::: challenge ## Exercise: Parameterize Your Overlap Tests (10 mins)
+::: challenge
+
+## Exercise: Parameterize Your Overlap Tests (10 mins)
 
 1. Open `test_overlap.py`.
 2. Refactor your individual test functions into a single, clean parameterized test function called `test_overlap_scenarios`.
@@ -84,7 +86,9 @@ def test_overlap_scenarios(rect_a, rect_b, expected):
 4. Run `pytest -v` (the `-v` flag stands for "verbose") in your terminal. Observe how pytest dynamically generates names for each of your parameterized runs!
 :::
 
-::: solution ## Solution
+::: solution
+
+## Solution
 
 Here is a clean, robust way to parameterize your overlap tests using coordinate tuples:
 

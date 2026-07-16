@@ -60,8 +60,10 @@ To keep your design clean and your trust intact, use this collaborative loop whe
 4. **The LLM drafts the draft implementation:** Feed the failing tests to the LLM and ask it to write the minimal code to make them turn green.
 5. **You refactor:** Clean up the code structure yourself, running the tests at every step to keep the loop tight and safe.
 
-::: rationale ## Discussion
-Think about your current relationship with AI coding assistants. 
+::: rationale
+
+## Discussion Think about your current relationship with AI coding
+assistants.
 
 * Do you find yourself using them primarily to write functional code first, or do you use them to help you design and brainstorm edge cases? 
 * How can you shift your prompts tomorrow to make the LLM a better TDD collaborator?

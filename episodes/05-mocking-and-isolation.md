@@ -77,7 +77,9 @@ Mocking is highly effective when applied to the **boundaries** of your software 
 ### Scenario B: Bad Mocking Targets (The Code Smell)
 If you find yourself mocking your own helper functions, mathematical subroutines, or internal class structures, you are likely using mocks to mask bad software design. 
 
-::: warning ## Code Smell: "Over-Mocking"
+::: warning
+
+## Code Smell: "Over-Mocking"
 If you have to mock out 5 layers of your own internal code just to write a unit test for a single function, **your codebase is tightly coupled**. 
 
 Your test is now directly bound to the internal implementation details of your code. The moment you change a variable name, split a function, or optimize your logic, all your tests will break—even if the overall calculation is still correct.
@@ -90,7 +92,9 @@ Instead of writing increasingly complex mocks, the best approach is to refactor 
 2. Write a pure, deterministic mathematical function that takes that raw data and does the calculations. 
 3. Write clean, mock-free unit tests for your calculation logic. Test the I/O function sparingly using a dedicated integration test.
 
-::: rationale ## Discussion
+::: rationale
+
+## Discussion
 Look at a recent script or program you wrote for your research. 
 
 * Where does it read files, query databases, or call external libraries? 
