@@ -136,8 +136,6 @@ By writing the tests first, you forced yourself to become the *user* of your own
 What we just did is the first step of **Test-Driven Development (TDD)**. TDD is a highly disciplined software workflow built on a tight, repeating three-step loop:
 
 
-![Red-Green-Refactor cycle, liberally borrowed from a blog at https://khalilstemmler.com/](fig/red-green-refactor.png)
-
 1. **RED:** Write a test for a behavior you want, run it, and watch it fail.
 2. **GREEN:** Write the absolute simplest, dirtiest code possible to make the test pass.
 3. **REFACTOR:** Clean up your code, remove duplication, and improve the design while keeping the tests green.
