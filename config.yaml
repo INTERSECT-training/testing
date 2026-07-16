@@ -68,7 +68,7 @@ contact: 'icosden@princeton.edu' # FIXME
 episodes:
   - 01-introduction-to-tdd.md
   - 01.5-why-we-test.md
-  - 02-parameterized-testing.md
+  - 02-parametrized-testing.md
   - 03-property-based-testing.md
   - 04-testing-and-design.md
   - 05-mocking-and-isolation.md
